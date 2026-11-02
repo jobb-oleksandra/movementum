@@ -4,6 +4,13 @@
 :root {
 	--brown: #4f3e3a;
 	--brown-soft: #675a55;
+	--brown-softest: #89747a;
+	/* Editorial ink accents: shades of the existing brown / dusty-rose palette. */
+	--ink-deep: #493834;
+	--ink-mauve: #77565d;
+	--ink-stone: #665e63;
+	--ink-clay: #71604e;
+
 	--sand: #d6c3b4;
 	--sand-pale: #e8ddd3;
 	--pink: #b77d88;
@@ -13,6 +20,7 @@
 	--milk: #fbfaf7;
 	--line: rgba(79, 62, 58, 0.21);
 	--font: "DM Sans", Arial, sans-serif;
+	--font-editorial: "Cormorant Garamond", Garamond, Georgia, serif;
 	--gutter: clamp(22px, 5.2vw, 94px);
 	--wide: 1360px;
 	/* Fluid typography: readable floors on mobile, restrained growth on large screens. */
@@ -54,6 +62,11 @@ h2,
 h3 {
 	font-weight: 400;
 }
+/* Typography contrast without changing fonts, sizes or section backgrounds. */
+h1, h2, h3 { color: var(--ink-deep); }
+.tone-accent { color: var(--ink-mauve); }
+.eyebrow { color: var(--ink-mauve); }
+
 a {
 	color: inherit;
 }
@@ -108,13 +121,8 @@ summary:focus-visible {
 	color: var(--brown);
 	white-space: nowrap;
 
-	font:
-		400 var(--type-marquee)/1.2 Garamond,
-		"Palatino Linotype",
-		"Book Antiqua",
-		Georgia,
-		serif;
-	letter-spacing: -0.03em;
+	font: 500 clamp(16px, 1.15vw, 20px)/1.2 var(--font-editorial);
+	letter-spacing: 0.045em;
 	text-rendering: optimizeLegibility;
 	font-feature-settings:
 		"kern" 1,
@@ -195,7 +203,7 @@ summary:focus-visible {
 	font-weight: 500 !important;
 	letter-spacing: 0.17em;
 	text-transform: uppercase;
-	color: var(--brown-soft);
+	color: var(--ink-mauve);
 }
 .body-copy {
 	font-size: var(--type-copy);
@@ -385,12 +393,7 @@ h2 {
 	flex-wrap: wrap;
 	margin: 0 0 38px;
 	color: var(--brown);
-	font:
-		400 var(--type-small)/1.35 Garamond,
-		"Palatino Linotype",
-		"Book Antiqua",
-		Georgia,
-		serif;
+	font: 400 clamp(15px, 1vw, 18px)/1.35 var(--font-editorial);
 	letter-spacing: -0.03em;
 	font-feature-settings:
 		"kern" 1,
@@ -467,16 +470,21 @@ h2 {
 .quiet-line {
 	font-size: var(--type-small);
 	letter-spacing: 0.08em;
-	color: #89736c;
+	color: var(--ink-clay);
 	margin-bottom: 25px;
 }
 .space-intro h2 {
-	font-size: clamp(30px, calc(1.3vw + 24px), 42px);
+	font-family: var(--font-editorial);
+	font-style: normal;
+	font-weight: 500;
+	font-size: clamp(37px, 3.4vw, 52px);
 	max-width: 740px;
 	margin: 0 auto;
-	letter-spacing: 0.02em;
+	letter-spacing: -0.028em;
 	text-transform: none;
-	line-height: 1.4;
+	line-height: 1.15;
+	text-wrap: balance;
+	text-rendering: optimizeLegibility;
 }
 .space-intro p:not(.quiet-line) {
 	max-width: 635px;
@@ -536,16 +544,8 @@ h2 {
 	text-align: center;
 }
 .interlude p {
-	/* 
-	  1. На Windows 'Garamond' выглядит намного изящнее и тоньше, чем плотная 'Georgia'.
-	  2. line-height: 1.15 вместо 1.25 — для крупных заголовков строки должны стоять чуть плотнее.
-	*/
-	font:
-		400 var(--type-quote)/1.15 Garamond,
-		"Palatino Linotype",
-		"Book Antiqua",
-		Georgia,
-		serif;
+	/* Editorial quote in genuine Cormorant Garamond, not a simulated italic. */
+	font: 400 var(--type-quote)/1.15 var(--font-editorial);
 
 	/* Чуть усиливаем отрицательный трекинг, чтобы крупные буквы с засечками стояли цельнее */
 	letter-spacing: -0.03em;
@@ -570,7 +570,7 @@ h2 {
 	opacity: 0.9;
 }
 .interlude span {
-	color: #a0787c;
+	color: var(--ink-mauve);
 }
 /* Product photo and text: natural, soft, generously spaced. */
 .product {
@@ -628,12 +628,7 @@ h2 {
 	border-bottom: 1px solid var(--line);
 }
 .product-note {
-	font:
-		400 var(--type-note)/1.55 Garamond,
-		"Palatino Linotype",
-		"Book Antiqua",
-		Georgia,
-		serif;
+	font: 400 clamp(16px, 1vw, 19px)/1.55 var(--font-editorial);
 	letter-spacing: -0.01em;
 	text-rendering: optimizeLegibility;
 	font-feature-settings:
@@ -708,12 +703,7 @@ h2 {
 	margin-top: 16px;
 	padding-top: 11px;
 	border-top: 1px solid var(--line);
-	font:
-		400 var(--type-small)/1.5 Garamond,
-		"Palatino Linotype",
-		"Book Antiqua",
-		Georgia,
-		serif;
+	font: 400 clamp(16px, 1vw, 19px)/1.5 var(--font-editorial);
 	letter-spacing: -0.01em;
 	text-rendering: optimizeLegibility;
 	font-feature-settings:
@@ -1168,8 +1158,8 @@ h2 {
 		padding: clamp(62px, 10vw, 88px) 0 clamp(65px, 9vw, 85px);
 	}
 	.space-intro h2 {
-		font-size: clamp(27px, 5.4vw, 38px);
-		line-height: 1.35;
+		font-size: clamp(35px, 5.2vw, 47px);
+		line-height: 1.15;
 	}
 	.space-intro p:not(.quiet-line) {
 		margin-top: 19px;
@@ -1416,7 +1406,7 @@ h2 {
 		padding-block: 60px 64px;
 	}
 	.space-intro h2 {
-		font-size: clamp(27px, 7.3vw, 34px);
+		font-size: clamp(33px, 8.1vw, 39px);
 	}
 	.product {
 		padding-block: 62px 72px;
@@ -1469,3 +1459,20 @@ h2 {
 		transition: none !important;
 	}
 }
+
+/* ── Movementum editorial typography accents ──
+   Soft hierarchy adapted from the existing brand colors. No font or layout changes. */
+.hero .eyebrow, .moment-copy .eyebrow { color: var(--ink-mauve); }
+.hero .body-copy, .moment-copy p:not(.eyebrow) { color: var(--ink-stone); }
+.hero h1, .moment-copy h2, .product-copy h2, .life-feature h2, .ending-copy h2 { color: var(--ink-deep); }
+.space-intro h2 .tone-accent, .product-copy h2 .tone-accent { color: var(--ink-clay); }
+.moment-copy h2 .tone-accent, .ending-copy h2 .tone-accent { color: var(--ink-mauve); }
+.life-feature h2 .tone-accent { color: var(--ink-clay); }
+.life-introduction, .product-copy > p:not(.eyebrow):not(.product-note) { color: var(--ink-stone); }
+.product-lines p:nth-child(2) { color: var(--ink-mauve); }
+.hero-path { color: var(--ink-clay); opacity: 1; }
+.text-link { color: var(--ink-mauve); }
+.text-link:hover { color: var(--ink-deep); }
+.top-note-track { color: var(--ink-stone); }
+.footer-brand { color: var(--ink-deep); }
+.footer-bottom, .product-note, .life-story-photo figcaption { color: var(--ink-stone); }
