@@ -26,40 +26,38 @@
 		<script defer="" src="js/retreat-parallax.js"></script>
 		<script defer="" src="js/retreat-vimeo.js"></script>
 		<script defer src="js/retreat-faq.js"></script>
+			<link rel="stylesheet" href="css/header-navigation.css" />
+	
+		<link rel="stylesheet" href="css/hero-page-transition.css" />
 	</head>
 	<body class="retreat-page">
 		<a class="skip-link" href="#main">Hopp til innholdet</a>
 		<header class="site-header" id="top">
 			<div class="header-inner wrapper">
-				<a
-					aria-label="Movementum – til forsiden"
-					class="brand"
-					href="index.html">
-					<img
-						alt="Movementums symbol"
-						height="323"
-						src="assets/images/logo.png"
-						width="640" />
+				<a class="brand" href="index.html" aria-label="Movementum – til forsiden">
+					<img src="assets/images/logo.png" width="640" height="323" alt="Movementums symbol" />
 					<span>movementum</span>
 				</a>
-				<nav aria-label="Hovedmeny" class="main-nav">
-					<a href="index.html">Hjem</a
-					><a aria-current="page" href="retreat.html">Retreat</a
-					><a href="#program">Program</a><a href="#nora">Møt Nora</a
-					><a href="#praktisk">Praktisk</a>
+				<nav class="main-nav" aria-label="Hovedmeny">
+					<a href="index.html">Hjem</a>
+					<a href="retreat.html" aria-current="page">Retreat</a>
+					<a href="index.html#om">Om Movementum</a>
+					<a href="index.html#arsplanlegger">Produkter</a>
+					<a href="#nora">Møt Nora</a>
+					<a href="#kontakt">Kontakt</a>
 				</nav>
 				<details class="mobile-menu">
 					<summary>
-						<span>Meny</span
-						><span aria-hidden="true" class="menu-icon"
-							><span></span><span></span
-						></span>
+						<span class="mobile-menu-title">Meny</span>
+						<span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
 					</summary>
 					<nav aria-label="Mobilmeny">
-						<a href="index.html">Hjem</a
-						><a aria-current="page" href="retreat.html">Retreat</a
-						><a href="#program">Program</a><a href="#nora">Møt Nora</a
-						><a href="#praktisk">Praktisk</a>
+					<a href="index.html">Hjem</a>
+					<a href="retreat.html" aria-current="page">Retreat</a>
+					<a href="index.html#om">Om Movementum</a>
+					<a href="index.html#arsplanlegger">Produkter</a>
+					<a href="#nora">Møt Nora</a>
+					<a href="#kontakt">Kontakt</a>
 					</nav>
 				</details>
 			</div>
@@ -525,11 +523,12 @@
 				</div>
 			</section>
 		</main>
-		<footer class="site-footer">
+		<footer class="site-footer" id="kontakt">
 			<div class="wrapper footer-main">
 				<div>
 					<a class="footer-brand" href="index.html">movementum</a>
 					<p>mindset · movement · momentum</p>
+					<p class="header-contact-note">Kontaktinformasjon oppdateres når den er bekreftet.</p>
 				</div>
 				<div class="footer-links">
 					<a href="index.html">Hjem</a
@@ -543,5 +542,7 @@
 				><span>Movementum Retreat · Panorama · Januar 2027</span>
 			</div>
 		</footer>
+			<script defer src="js/header-navigation.js"></script>
+			<script src="js/page-navigation.js"></script>
 	</body>
 </html>

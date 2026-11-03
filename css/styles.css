@@ -14,6 +14,7 @@
 	--sand: #d6c3b4;
 	--sand-pale: #e8ddd3;
 	--pink: #b77d88;
+	--pink-dark: #986972;
 	--pink-pale: #eee3e0;
 	--cream: #f8f5f3;
 	--ivory: #f7f4ed;
@@ -63,9 +64,17 @@ h3 {
 	font-weight: 400;
 }
 /* Typography contrast without changing fonts, sizes or section backgrounds. */
-h1, h2, h3 { color: var(--ink-deep); }
-.tone-accent { color: var(--ink-mauve); }
-.eyebrow { color: var(--ink-mauve); }
+h1,
+h2,
+h3 {
+	color: var(--ink-deep);
+}
+.tone-accent {
+	color: var(--ink-mauve);
+}
+.eyebrow {
+	color: var(--ink-mauve);
+}
 
 a {
 	color: inherit;
@@ -1462,17 +1471,57 @@ h2 {
 
 /* ── Movementum editorial typography accents ──
    Soft hierarchy adapted from the existing brand colors. No font or layout changes. */
-.hero .eyebrow, .moment-copy .eyebrow { color: var(--ink-mauve); }
-.hero .body-copy, .moment-copy p:not(.eyebrow) { color: var(--ink-stone); }
-.hero h1, .moment-copy h2, .product-copy h2, .life-feature h2, .ending-copy h2 { color: var(--ink-deep); }
-.space-intro h2 .tone-accent, .product-copy h2 .tone-accent { color: var(--ink-clay); }
-.moment-copy h2 .tone-accent, .ending-copy h2 .tone-accent { color: var(--ink-mauve); }
-.life-feature h2 .tone-accent { color: var(--ink-clay); }
-.life-introduction, .product-copy > p:not(.eyebrow):not(.product-note) { color: var(--ink-stone); }
-.product-lines p:nth-child(2) { color: var(--ink-mauve); }
-.hero-path { color: var(--ink-clay); opacity: 1; }
-.text-link { color: var(--ink-mauve); }
-.text-link:hover { color: var(--ink-deep); }
-.top-note-track { color: var(--ink-stone); }
-.footer-brand { color: var(--ink-deep); }
-.footer-bottom, .product-note, .life-story-photo figcaption { color: var(--ink-stone); }
+.hero .eyebrow,
+.moment-copy .eyebrow {
+	color: var(--ink-mauve);
+}
+.hero .body-copy,
+.moment-copy p:not(.eyebrow) {
+	color: var(--ink-stone);
+}
+.hero h1,
+.moment-copy h2,
+.product-copy h2,
+.life-feature h2,
+.ending-copy h2 {
+	color: var(--ink-deep);
+}
+.space-intro h2 .tone-accent,
+.product-copy h2 .tone-accent {
+	color: var(--ink-clay);
+}
+.moment-copy h2 .tone-accent,
+.ending-copy h2 .tone-accent {
+	color: var(--ink-mauve);
+}
+.life-feature h2 .tone-accent {
+	color: var(--ink-clay);
+}
+.life-introduction,
+.product-copy > p:not(.eyebrow):not(.product-note) {
+	color: var(--ink-stone);
+}
+.product-lines p:nth-child(2) {
+	color: var(--ink-mauve);
+}
+.hero-path {
+	color: var(--ink-clay);
+	opacity: 1;
+}
+.text-link {
+	color: var(--ink-mauve);
+}
+.text-link:hover {
+	color: var(--ink-deep);
+}
+.top-note-track {
+	color: var(--ink-stone);
+}
+.footer-brand {
+	color: var(--ink-deep);
+}
+.footer-bottom,
+.product-note,
+.life-story-photo figcaption {
+	color: var(--ink-stone);
+}

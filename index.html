@@ -16,35 +16,39 @@
 			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"
 			rel="stylesheet" />
 		<link rel="stylesheet" href="css/styles.css" />
+			<link rel="stylesheet" href="css/header-navigation.css" />
+	
+		<link rel="stylesheet" href="css/hero-page-transition.css" />
 	</head>
 	<body>
 		<a class="skip-link" href="#main">Hopp til innholdet</a>
 
 		<header class="site-header" id="top">
 			<div class="header-inner wrapper">
-				<a
-					class="brand"
-					href="#top"
-					aria-label="Movementum – tilbake til toppen">
-					<img src="assets/images/logo.png" alt="Movementums symbol" />
+				<a class="brand" href="index.html" aria-label="Movementum – til forsiden">
+					<img src="assets/images/logo.png" width="640" height="323" alt="Movementums symbol" />
 					<span>movementum</span>
 				</a>
 				<nav class="main-nav" aria-label="Hovedmeny">
+					<a href="index.html" aria-current="page">Hjem</a>
+					<a href="retreat.html">Retreat</a>
 					<a href="#om">Om Movementum</a>
-					<a href="#for-deg">For deg</a>
-					<a href="#arsplanlegger">Årsplanleggeren</a>
+					<a href="#arsplanlegger">Produkter</a>
+					<a href="retreat.html#nora">Møt Nora</a>
+					<a href="#kontakt">Kontakt</a>
 				</nav>
 				<details class="mobile-menu">
 					<summary>
-						<span>Meny</span
-						><span class="menu-icon" aria-hidden="true"
-							><span></span><span></span
-						></span>
+						<span class="mobile-menu-title">Meny</span>
+						<span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
 					</summary>
 					<nav aria-label="Mobilmeny">
-						<a href="#om">Om Movementum</a>
-						<a href="#for-deg">For deg</a>
-						<a href="#arsplanlegger">Årsplanleggeren</a>
+					<a href="index.html" aria-current="page">Hjem</a>
+					<a href="retreat.html">Retreat</a>
+					<a href="#om">Om Movementum</a>
+					<a href="#arsplanlegger">Produkter</a>
+					<a href="retreat.html#nora">Møt Nora</a>
+					<a href="#kontakt">Kontakt</a>
 					</nav>
 				</details>
 			</div>
@@ -276,11 +280,12 @@
 			</section>
 		</main>
 
-		<footer class="site-footer">
+		<footer class="site-footer" id="kontakt">
 			<div class="wrapper footer-main">
 				<div>
 					<a href="#top" class="footer-brand">movementum</a>
 					<p>mindset · movement · momentum</p>
+					<p class="header-contact-note">Kontaktinformasjon oppdateres når den er bekreftet.</p>
 				</div>
 				<div class="footer-links">
 					<a href="#om">Om Movementum</a
@@ -297,5 +302,7 @@
 				<span>© 2026 Movementum</span><span>Små steg, i ditt eget tempo.</span>
 			</div>
 		</footer>
+			<script defer src="js/header-navigation.js"></script>
+			<script src="js/page-navigation.js"></script>
 	</body>
 </html>
