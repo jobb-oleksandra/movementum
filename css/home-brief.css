@@ -1,0 +1,434 @@
+/* Movementum – phase 1 homepage per 29 October 2026 brief.
+   Uses the same palette, type families, navigation and original assets.
+   Scoped additions only: retreat.html is intentionally unchanged. */
+
+/* Keep hero at the viewport height established by hero-page-transition.css. */
+.home-page .hero-copy { background: #e3dbcf; }
+.home-page .hero .copy-content { max-width: 480px; }
+.home-page .hero .body-copy { max-width: 435px; }
+.home-page .hero .hero-photo img { object-position: 73% 49%; }
+.home-hero-actions { display:flex; align-items:center; flex-wrap:wrap; gap: 13px 24px; }
+.home-hero-actions .text-link { margin:0; white-space:nowrap; }
+.home-page .hero h1 { max-width: 480px; }
+
+/* Compact retreat feature: an invitation, not a copy of the retreat page. */
+.home-retreat { padding:clamp(72px,7vw,105px) 0; background:var(--milk); }
+.home-retreat-grid { display:grid; grid-template-columns:minmax(0, 1.03fr) minmax(0,.97fr); align-items:center; gap:clamp(40px,8vw,130px); }
+.home-retreat-photo { margin:0; min-width:0; }
+.home-retreat-photo img { width:100%; aspect-ratio:5 / 4.05; object-fit:cover; object-position:50% 39%; filter:saturate(.85); }
+
+.home-retreat-copy { max-width:475px; }
+.home-retreat-copy h2,.home-health-copy h2,.home-nora-copy h2 { font-size:var(--type-heading); margin:20px 0 26px; }
+.home-retreat-copy > p:not(.eyebrow),.home-health-copy p:not(.eyebrow),.home-nora-copy p:not(.eyebrow) { font-size:var(--type-copy); color:var(--brown-soft); margin:0 0 17px; line-height:1.85; }
+.home-retreat-copy > p:not(.eyebrow) { max-width:390px; margin-bottom:30px; }
+.home-retreat-copy .button { min-width:230px; }
+
+/* A single philosophy introduction leads into the image-led three pillars. */
+.home-philosophy-intro { max-width:690px; margin:0 auto clamp(45px,5vw,80px); text-align:center; }
+.home-philosophy-intro h2 { font:500 clamp(39px,4.1vw,62px)/1.12 var(--font-editorial); letter-spacing:-.032em; text-transform:none; text-wrap:balance; }
+.home-philosophy-intro p { max-width:560px; margin:24px auto 0; font-size:var(--type-copy); line-height:1.85; color:var(--brown-soft); }
+
+/* Real image-led three-pillar story, no ornamental numbering or rounded tiles. */
+.home-pillars { padding:clamp(86px,9vw,142px) 0 clamp(88px,10vw,150px); background:#e9e0d8; }
+.home-section-heading { max-width:700px; margin-bottom:44px; }
+.home-section-heading h2 { font-size:var(--type-heading); margin-top:14px; }
+.home-pillars-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(16px,2.5vw,40px); }
+.home-pillar-media { overflow:hidden; aspect-ratio:4 / 4.4; background:var(--sand); }
+.home-pillar-media img { width:100%; height:100%; object-fit:cover; }
+.home-pillar:nth-child(1) .home-pillar-media img { object-position:66% 50%; }
+.home-pillar:nth-child(2) .home-pillar-media img { object-position:55% 50%; }
+.home-pillar:nth-child(3) .home-pillar-media img { object-position:72% 50%; }
+.home-pillar-copy { padding-top:23px; }
+.home-pillar-copy h3 { font:500 clamp(28px,2.6vw,39px)/1.05 var(--font-editorial); color:var(--ink-deep); }
+.home-pillar-copy p { border-top:1px solid var(--line); padding-top:15px; margin-top:16px; color:var(--brown-soft); font-size:var(--type-copy); line-height:1.75; }
+
+/* A small editorial hint, not a second retreat explanation. */
+.home-health { display:grid; grid-template-columns:1fr 1fr; background:#f1eae4; }
+.home-health-photo { position:relative; min-height:clamp(340px,35vw,480px); overflow:hidden; }
+.home-health-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:53% 48%; }
+.home-health-copy { display:flex; align-items:center; justify-content:center; padding:clamp(45px,5vw,88px) clamp(30px,7vw,125px); }
+.home-health-copy .copy-content { max-width:465px; }
+
+
+/* Founder photography should feel like a natural part of the brand. */
+.home-nora { padding:clamp(85px,9vw,145px) 0; background:var(--ivory); }
+.home-nora-grid { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:clamp(50px,9vw,145px); align-items:center; }
+.home-nora-copy { max-width:445px; }
+
+.home-nora-image img { width:100%; aspect-ratio:1.35; object-fit:cover; object-position:55% 44%; }
+.home-nora-image figcaption { margin-top:12px; font:400 19px/1.3 var(--font-editorial); color:var(--ink-clay); }
+
+/* Planner stays visible but no longer owns most of the homepage. */
+.home-product { background:#e9ddd4; padding-block:clamp(80px,9vw,140px); }
+.home-product .product-photo { min-height:0; }
+.home-product .product-photo img { object-position:50% 42%; }
+.home-product .product-copy h2 { max-width:470px; }
+.home-page .footer-links { flex-wrap:wrap; justify-content:flex-end; }
+
+@media (max-width:1199px) {
+  .home-page .hero .copy-content { max-width:550px; }
+  .home-retreat-grid,.home-nora-grid { gap:clamp(30px,5vw,80px); }
+  .home-health-copy { padding:55px clamp(26px,5vw,62px); }
+}
+@media (min-width:760px) and (max-width:1020px) {
+  .home-retreat-grid { grid-template-columns:.95fr 1.05fr; }
+  .home-retreat-photo img { aspect-ratio:4 / 4.7; }
+  .home-retreat-copy h2,.home-nora-copy h2,.home-health-copy h2 { font-size:clamp(31px,3.2vw,39px); }
+  .home-nora-grid { grid-template-columns:.9fr 1.1fr; }
+  .home-pillars-grid { gap:18px; }
+  .home-pillars .home-pillar-copy p { font-size:15px; }
+  .home-health-photo { min-height:430px; }
+}
+/* Mobile homepage: editorial pacing, flush imagery, and independent section rhythms.
+   Desktop and retreat page intentionally keep their original composition. */
+@media (max-width:759px) {
+  .home-page .hero.split-section {
+    grid-template-rows: minmax(255px, 47%) minmax(0, 1fr);
+  }
+  .home-page .hero > .hero-copy {
+    padding: clamp(17px, 3svh, 27px) var(--gutter);
+  }
+  .home-page .hero .copy-content { max-width: 560px; }
+  .home-page .hero h1 {
+    max-width: 480px;
+    font-size: clamp(31px, 7.4vw, 43px);
+    line-height: 1.1;
+    margin-top: 15px;
+  }
+  .home-page .hero .body-copy {
+    max-width: 37ch;
+    margin: 20px 0 28px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  /* Distinct levels: descriptive copy > primary CTA > quiet secondary link. */
+  .home-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+  }
+  .home-hero-actions .button-flip { min-width: 0; }
+  .home-hero-actions .text-link {
+    min-height: 0;
+    padding-bottom: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .home-page .hero .hero-photo img { object-position: 75% 48%; }
+  .home-page .hero .hero-floating-note {
+    left: var(--gutter);
+    bottom: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 14px;
+    min-width: 0;
+    gap: 5px;
+  }
+
+  /* The event reads as a short editorial feature, not an inset card.
+     display:contents allows its existing HTML text to flank the full-bleed photo. */
+  .home-retreat { padding: 63px 0 71px; }
+  .home-retreat-grid {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .home-retreat-copy { display: contents; }
+  .home-retreat-copy > .eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+    padding-inline: var(--gutter);
+    max-width: none;
+    font-size: 11px !important;
+    letter-spacing: .1em;
+    line-height: 1.55 !important;
+  }
+  .home-retreat-copy > .eyebrow .keep-together { white-space: nowrap; }
+  .home-retreat-copy > h2 .tone-accent { display: inline-block; }
+  .home-retreat-copy > h2 {
+    grid-column: 1;
+    grid-row: 2;
+    padding-inline: var(--gutter);
+    margin: 12px 0 25px;
+    font-size: clamp(37px, 9vw, 51px);
+    line-height: 1.05;
+    letter-spacing: -.005em;
+  }
+  .home-retreat-photo {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+  }
+  .home-retreat-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.47;
+    object-fit: cover;
+    object-position: 50% 40%;
+  }
+  .home-retreat-copy > p:not(.eyebrow) {
+    grid-column: 1;
+    grid-row: 4;
+    padding: 0 var(--gutter);
+    margin: 25px 0 23px;
+    max-width: 46ch;
+    line-height: 1.67;
+  }
+  .home-retreat-copy > .button {
+    grid-column: 1;
+    grid-row: 5;
+    justify-self: start;
+    margin-left: var(--gutter);
+    min-width: 0;
+    width: min(263px, calc(100% - 2 * var(--gutter)));
+  }
+
+  .home-page .top-note { height: 49px; }
+  .home-page .top-note-track { gap: 27px; }
+
+  /* The brand story stays cohesive, but each image has a different placement.
+     The central band is deliberately unboxed and uses an existing palette tone. */
+  .home-pillars { padding: 76px 0 35px; }
+  .home-pillars .wrapper { width: 100%; max-width: none; }
+  .home-philosophy-intro {
+    max-width: none;
+    margin: 0 0 39px;
+    padding: 0 var(--gutter);
+    text-align: left;
+  }
+  .home-philosophy-intro h2 {
+    max-width: 15ch;
+    font-size: clamp(33px, 8.6vw, 41px);
+    line-height: 1.08;
+    letter-spacing: -.026em;
+  }
+  .home-philosophy-intro p {
+    max-width: 35ch;
+    margin: 15px 0 0;
+    line-height: 1.66;
+  }
+  .home-pillars-grid { display: block; }
+  .home-pillar {
+    padding-inline: var(--gutter);
+    margin: 0 0 66px;
+  }
+  .home-pillar-media {
+    width: calc(100% + var(--gutter));
+    margin-left: calc(-1 * var(--gutter));
+    aspect-ratio: 1.28;
+  }
+  .home-pillar:nth-child(1) .home-pillar-media img { object-position: 60% 50%; }
+  .home-pillar-copy { padding-top: 20px; }
+  .home-pillar-copy h3 {
+    font-size: clamp(29px, 7.9vw, 37px);
+    line-height: 1.08;
+    margin: 0;
+  }
+  .home-pillar-copy p {
+    max-width: 31ch;
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .home-pillar:nth-child(2) {
+    background: #f3ebe4;
+    padding-block: 30px 34px;
+    margin-bottom: 65px;
+  }
+  .home-pillar:nth-child(2) .home-pillar-copy {
+    padding: 18px 0 0;
+  }
+  .home-pillar:nth-child(2) .home-pillar-media {
+    width: calc(100% + var(--gutter));
+    margin: 0 calc(-1 * var(--gutter)) 0 0;
+    aspect-ratio: 1.33;
+  }
+  .home-pillar:nth-child(2) .home-pillar-media img { object-position: 50% 43%; }
+  .home-pillar:nth-child(3) { margin-bottom: 12px; }
+  .home-pillar:nth-child(3) .home-pillar-media { aspect-ratio: 1.43; }
+
+  .home-health {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 10px;
+  }
+  .home-health-copy { order: 1; padding: 34px var(--gutter) 24px; }
+  .home-health-photo { order: 2; min-height: 0; aspect-ratio: 1.45; }
+  .home-health-copy h2,
+  .home-nora-copy h2,
+  .home-product .product-copy h2 { font-size: clamp(35px, 8.5vw, 46px); }
+  .home-health-copy h2 { margin: 13px 0 19px; max-width: 10.5ch; }
+
+  .home-nora { padding: 74px 0 78px; }
+  .home-nora-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+  .home-nora-image img { aspect-ratio: 1.32; }
+  .home-nora-image figcaption { margin-top: 13px; font-size: 16px; }
+  .home-nora-copy { max-width: 600px; }
+  .home-nora-copy h2 { margin: 12px 0 18px; }
+
+  .home-product { padding-block: 70px 81px; }
+  /* Keep the desktop photo-first layout, but on phones introduce the
+     product in words first so the next section doesn't begin with an image. */
+  .home-product .product-grid { gap: 35px; }
+  .home-product .product-copy { order: 1; }
+  .home-product .product-photo { order: 2; }
+  .home-product .product-copy h2 { margin: 14px 0 18px; }
+  .home-product .product-lines { margin: 22px 0 25px; }
+  .home-page .footer-links { justify-content: flex-start; }
+}
+@media (max-width:480px) {
+  .home-page .hero .body-copy { margin: 17px 0 26px; font-size: 14px; }
+  .home-page .hero h1 { font-size: clamp(30px, 7.5vw, 37px); }
+  .home-hero-actions { gap: 15px; }
+  .home-hero-actions .button-flip { min-height: 50px; }
+  .home-hero-actions .button-flip .button-flip-label { padding: 14px 20px; }
+  .home-page .hero .hero-floating-note { padding: 9px 12px; gap: 4px; }
+  .home-philosophy-intro h2 { font-size: clamp(31px, 8.7vw, 38px); }
+  .home-nora-image img { aspect-ratio: 1.25; }
+}
+@media (max-width:360px) {
+  .home-page .hero.split-section { grid-template-rows: minmax(262px, 51%) minmax(0, 1fr); }
+  .home-page .hero h1 { font-size: 29px; }
+  .home-hero-actions .text-link { font-size: 12px; }
+  .home-retreat-copy > h2 { font-size: clamp(30px, 8.6vw, 33px); line-height: 1.08; }
+  /* Compact short phones without making the CTA look glued to the paragraph. */
+  .home-page .hero .body-copy { margin: 11px 0 19px; }
+  .home-hero-actions { gap: 10px; }
+  .home-pillars { padding-top: 64px; }
+  .home-philosophy-intro h2 { font-size: clamp(30px, 9.2vw, 34px); }
+  .home-health-copy h2 { font-size: clamp(28px, 8.9vw, 31px); }
+}
+/* Small/short phones need a compact first screen so the secondary link
+   finishes before the photograph instead of bleeding into it. */
+@media (max-width: 360px) and (max-height: 650px) {
+  .home-page .hero > .hero-copy { padding-block: 10px 12px; }
+  .home-page .hero h1 { margin-top: 8px; font-size: 27px; line-height: 1.06; }
+  .home-page .hero .body-copy { margin: 9px 0 14px; font-size: 13px; line-height: 1.5; }
+  .home-hero-actions { gap: 9px; }
+  .home-hero-actions .button-flip { min-height: 46px; }
+  .home-hero-actions .button-flip .button-flip-label { padding-block: 12px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .home-pillars * { animation:none !important; }
+}
+
+/* Homepage hero: image-led proportions instead of forcing the entire opening
+   into every viewport. Only index.html is affected; retreat remains as-is. */
+@media (min-width: 1200px) {
+  .home-page .hero.split-section {
+    height: clamp(620px, 49vw, 760px);
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .home-page .hero.split-section > .hero-copy {
+    padding-block: clamp(58px, 6vw, 100px);
+  }
+  .home-page .hero.split-section > .hero-photo {
+    height: 100%;
+    min-height: 0;
+  }
+}
+
+/* Landscape tablets and smaller laptops are wide enough for a true split hero.
+   Avoid the current extra-tall photograph beneath a narrow text column. */
+@media (min-width: 960px) and (max-width: 1199px) {
+  .home-page .hero.split-section {
+    height: clamp(550px, 59vw, 660px);
+    min-height: 0;
+    grid-template-columns: minmax(0, .97fr) minmax(0, 1.03fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
+  .home-page .hero.split-section > .hero-copy {
+    padding: 48px clamp(42px, 5.5vw, 72px);
+  }
+  .home-page .hero .copy-content { max-width: 480px; }
+  .home-page .hero h1 {
+    font-size: clamp(34px, 3.5vw, 42px);
+    line-height: 1.18;
+  }
+  .home-page .hero.split-section > .hero-photo {
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+  }
+}
+
+/* Portrait tablets: comfortable reading space followed by a landscape image.
+   The section may extend beyond the first screen instead of distorting its crop. */
+@media (min-width: 760px) and (max-width: 959px) {
+  .home-page .hero.split-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    height: auto;
+    min-height: 0;
+  }
+  .home-page .hero.split-section > .hero-copy {
+    min-height: 0;
+    padding: clamp(52px, 7vw, 80px) var(--gutter);
+  }
+  .home-page .hero .copy-content { max-width: 570px; }
+  .home-page .hero h1 {
+    max-width: 540px;
+    font-size: clamp(37px, 4.8vw, 46px);
+    line-height: 1.16;
+  }
+  .home-page .hero.split-section > .hero-photo {
+    width: 100%;
+    height: clamp(370px, 53vw, 485px);
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+  }
+  .home-page .hero .hero-photo img { object-position: 70% 48%; }
+}
+
+/* Phones: natural flow. Very short screens can scroll, so typography and the
+   primary action no longer have to shrink just to fit above the photograph. */
+@media (max-width: 759px) {
+  .home-page .hero.split-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+    grid-template-rows: none;
+  }
+  .home-page .hero.split-section > .hero-copy {
+    flex: 0 0 auto;
+    min-height: 0;
+    padding: clamp(42px, 8vw, 68px) var(--gutter)
+             clamp(44px, 7vw, 61px);
+  }
+  .home-page .hero .copy-content { max-width: 560px; }
+  .home-page .hero.split-section > .hero-photo {
+    flex: 0 0 auto;
+    width: 100%;
+    height: clamp(340px, 104vw, 520px);
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+  }
+}
+@media (max-width: 360px) and (max-height: 650px) {
+  .home-page .hero.split-section > .hero-copy {
+    padding-block: 38px 42px;
+  }
+}
+
+/* The desktop breakpoint must not turn "Mer enn trening" into three lines. */
+@media (min-width: 1200px) and (max-width: 1359px) {
+  .home-page .hero h1 {
+    font-size: clamp(39px, 3.4vw, 43px);
+    letter-spacing: .022em;
+  }
+}

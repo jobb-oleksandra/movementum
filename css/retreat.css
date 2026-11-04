@@ -41,7 +41,7 @@
 	height: 100%;
 	container-type: size;
 	overflow: hidden;
-	background: #dad0c4 url("../assets/images/retreat-video-poster.jpg") center /
+	background: #dad0c4 url("../assets/images/optimized/retreat-video-poster-1600.webp") center /
 		cover no-repeat;
 }
 .retreat-page .retreat-hero-photo .retreat-vimeo-frame > iframe {
@@ -54,6 +54,9 @@
 	transform: translate(-50%, -50%);
 	pointer-events: none;
 }
+/* Preserve the poster until Vimeo actually reports playback. */
+.retreat-page .retreat-hero-photo .retreat-vimeo-frame > iframe { opacity: 0; }
+.retreat-page .retreat-hero-photo .retreat-vimeo-frame.is-vimeo > iframe { opacity: 1; }
 .retreat-page .retreat-hero-photo .retreat-vimeo-frame.is-vimeo video {
 	display: none;
 }
@@ -574,7 +577,7 @@
 		display: none;
 	}
 	.retreat-page .retreat-hero-photo {
-		background: url("../assets/images/retreat-video-poster.jpg") center / cover
+		background: url("../assets/images/optimized/retreat-video-poster-1600.webp") center / cover
 			no-repeat;
 	}
 }

@@ -6,27 +6,43 @@
 		<meta name="theme-color" content="#f7f4ed" />
 		<meta
 			name="description"
-			content="Movementum er en årsplanlegger for deg som ønsker mer oversikt, ro og retning i hverdagen. Små steg, i ditt eget tempo." />
-		<title>Movementum | Små steg, eget tempo</title>
-		<link rel="icon" href="assets/images/brand-mark.png" type="image/png" />
-		<link rel="preload" as="image" href="assets/images/hero.webp" />
+			content="Movementum samler refleksjon, bevegelse og opplevelser. Bli kjent med merkevaren, møt Nora, oppdag januarretreatet og se årsplanleggeren." />
+		<title>Movementum | Mindset · Movement · Momentum</title>
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="nb_NO" />
+		<meta property="og:site_name" content="Movementum" />
+		<meta property="og:title" content="Movementum | Mindset · Movement · Momentum" />
+		<meta property="og:description" content="Movementum samler refleksjon, bevegelse og opplevelser. Bli kjent med merkevaren, møt Nora, oppdag januarretreatet og se årsplanleggeren." />
+		<meta name="twitter:card" content="summary" />
+		<link rel="icon" href="assets/images/favicon.png" type="image/png" />
+		<link rel="preload" as="image" href="assets/images/optimized/1-1080.webp"
+            imagesrcset="assets/images/optimized/1-480.webp 480w, assets/images/optimized/1-960.webp 960w, assets/images/optimized/1-1080.webp 1080w"
+            imagesizes="(max-width: 759px) 100vw, (max-width: 1199px) 100vw, 50vw" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"
 			rel="stylesheet" />
 		<link rel="stylesheet" href="css/styles.css" />
-			<link rel="stylesheet" href="css/header-navigation.css" />
-	
+		<link rel="stylesheet" href="css/header-navigation.css" />
+
 		<link rel="stylesheet" href="css/hero-page-transition.css" />
+		<link rel="stylesheet" href="css/home-brief.css" />
 	</head>
-	<body>
+	<body class="home-page">
 		<a class="skip-link" href="#main">Hopp til innholdet</a>
 
 		<header class="site-header" id="top">
 			<div class="header-inner wrapper">
-				<a class="brand" href="index.html" aria-label="Movementum – til forsiden">
-					<img src="assets/images/logo.png" width="640" height="323" alt="Movementums symbol" />
+				<a
+					class="brand"
+					href="index.html"
+					aria-label="Movementum – til forsiden">
+					<img
+						src="assets/images/logo.png"
+						width="323"
+						height="323"
+						alt="" />
 					<span>movementum</span>
 				</a>
 				<nav class="main-nav" aria-label="Hovedmeny">
@@ -34,84 +50,99 @@
 					<a href="retreat.html">Retreat</a>
 					<a href="#om">Om Movementum</a>
 					<a href="#arsplanlegger">Produkter</a>
-					<a href="retreat.html#nora">Møt Nora</a>
+					<a href="#nora">Møt Nora</a>
 					<a href="#kontakt">Kontakt</a>
 				</nav>
 				<details class="mobile-menu">
 					<summary>
 						<span class="mobile-menu-title">Meny</span>
-						<span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
+						<span class="menu-icon" aria-hidden="true"
+							><span></span><span></span
+						></span>
 					</summary>
 					<nav aria-label="Mobilmeny">
-					<a href="index.html" aria-current="page">Hjem</a>
-					<a href="retreat.html">Retreat</a>
-					<a href="#om">Om Movementum</a>
-					<a href="#arsplanlegger">Produkter</a>
-					<a href="retreat.html#nora">Møt Nora</a>
-					<a href="#kontakt">Kontakt</a>
+						<a href="index.html" aria-current="page">Hjem</a>
+						<a href="retreat.html">Retreat</a>
+						<a href="#om">Om Movementum</a>
+						<a href="#arsplanlegger">Produkter</a>
+						<a href="#nora">Møt Nora</a>
+						<a href="#kontakt">Kontakt</a>
 					</nav>
 				</details>
 			</div>
 		</header>
 
 		<main id="main">
+			<!-- 01: The brand first; the current retreat is the primary action. -->
 			<section class="hero split-section" aria-labelledby="hero-title">
 				<div class="hero-copy">
 					<div class="copy-content">
-						<p class="eyebrow">Årsplanlegger 2026</p>
-						<h1 id="hero-title">Mer rom for det <span class="tone-accent">som betyr noe.</span></h1>
+						<p class="eyebrow">Movementum</p>
+						<h1 id="hero-title">
+							Bevegelse er <span class="tone-accent">mer enn trening.</span>
+						</h1>
 						<p class="body-copy">
-							En rolig start for dager som ellers går fort – med plass til
-							refleksjon, retning og små steg i din egen rytme.
+							Et sted for nye perspektiver, gode opplevelser og små steg videre
+							– i ditt eget tempo.
 						</p>
-						<div class="hero-path" aria-label="Movementums fokusområder">
-							<span>Ro</span>
-							<span>Oversikt</span>
-							<span>Retning</span>
+						<div class="home-hero-actions">
+							<a
+								class="button button-flip"
+								href="retreat.html"
+								aria-label="Oppdag januarretreatet"
+								data-front="Oppdag januarretreatet"
+								data-back="Utforsk helgen">
+								<span class="button-flip-label">Oppdag januarretreatet</span>
+							</a>
+							<a class="text-link" href="#om">Om Movementum</a>
 						</div>
-						<a
-							class="button button-flip"
-							href="#arsplanlegger"
-							aria-label="Se årsplanleggeren"
-							data-front="Se årsplanleggeren"
-							data-back="Oppdag planleggeren">
-							<span class="button-flip-label">Se årsplanleggeren</span>
-						</a>
 					</div>
 				</div>
 				<div class="hero-photo">
 					<img
-						src="assets/images/hero.webp"
-						alt="Person på løpetur i fjellene i rolig morgenlys"
-						width="1200"
-						height="750"
-						fetchpriority="high" />
+						src="assets/images/optimized/1-1080.webp"
+						srcset="assets/images/optimized/1-480.webp 480w, assets/images/optimized/1-960.webp 960w, assets/images/optimized/1-1080.webp 1080w"
+						sizes="(max-width: 759px) 100vw, (max-width: 1199px) 100vw, 50vw"
+						alt="Kvinne som tøyer overkroppen under en treningsøvelse"
+						width="1080"
+						height="810"
+						fetchpriority="high"  decoding="async" />
 					<div class="hero-floating-note" aria-hidden="true">
-						<span>små steg</span>
-						<strong>eget tempo</strong>
+						<span>Movementum</span><strong>i ditt tempo</strong>
 					</div>
 				</div>
 			</section>
 
-			<section class="space-intro" id="om" aria-labelledby="space-title">
-				<div class="intro-inner wrapper-narrow">
-					<p class="quiet-line">Et lite steg om gangen</p>
-					<h2 id="space-title">
-						Du trenger ikke å rekke mer. Du trenger plass til <span class="tone-accent">ditt eget tempo.</span>
-					</h2>
-					<p>
-						Midt i hverdagens planer, forventninger og gjøremål kan det være
-						godt å stoppe litt opp. Movementum handler om å finne tilbake til
-						det som er viktig for deg – uten å gjøre livet til enda en
-						oppgaveliste.
-					</p>
-					<img
-						class="intro-mark"
-						src="assets/images/brand-mark.png"
-						alt=""
-						width="1000"
-						height="724"
-						loading="lazy" />
+			<!-- 02: One concise editorial introduction to the current event. The
+                 programme and detailed women's-health content belong on retreat.html. -->
+			<section class="home-retreat" aria-labelledby="home-retreat-title">
+				<div class="wrapper home-retreat-grid">
+					<figure class="home-retreat-photo">
+						<img
+							src="assets/images/optimized/retreat-video-poster-1600.webp"
+						srcset="assets/images/optimized/retreat-video-poster-480.webp 480w, assets/images/optimized/retreat-video-poster-960.webp 960w, assets/images/optimized/retreat-video-poster-1600.webp 1600w"
+						sizes="(max-width: 759px) 100vw, (max-width: 1199px) 100vw, 50vw"
+							alt="Fasaden til Panorama Hotell &amp; Resort"
+							width="1600"
+							height="900"
+							loading="lazy"  decoding="async" />
+					</figure>
+					<div class="home-retreat-copy">
+						<p class="eyebrow">
+							16.–17. januar 2027 · <span class="keep-together">Panorama Hotell&nbsp;&amp;&nbsp;Resort</span>
+						</p>
+						<h2 id="home-retreat-title">
+							I januar <span class="tone-accent">møtes vi.</span>
+						</h2>
+						<p>
+							To dager for kvinner med bevegelse, nye perspektiver og gode
+							møter. Opplev Movementum Retreat på Panorama – og finn ut om
+							helgen er noe for deg.
+						</p>
+						<a class="button button-outline" href="retreat.html"
+							>Oppdag januarretreatet</a
+						>
+					</div>
 				</div>
 			</section>
 
@@ -132,165 +163,211 @@
 				</div>
 			</div>
 
+			<!-- 03–04: One brand explanation, followed immediately by the three
+                 connected perspectives. No duplicate philosophy section. -->
 			<section
-				class="moment split-section"
-				id="for-deg"
-				aria-labelledby="moment-title">
-				<figure class="moment-photo">
-					<img
-						src="assets/images/planner-detail-01.jpg"
-						alt="Kvinne sitter avslappet i sofaen med Movementum-planleggeren"
-						width="512"
-						height="640"
-						loading="lazy" />
-				</figure>
-				<div class="moment-copy">
-					<div class="copy-content">
-						<p class="eyebrow">En stund for deg selv</p>
-						<h2 id="moment-title">Finn tilbake til <span class="tone-accent">din egen rytme.</span></h2>
+				class="home-pillars home-philosophy"
+				id="om"
+				aria-labelledby="home-pillars-title">
+				<div class="wrapper">
+					<div class="home-philosophy-intro">
+						<h2 id="home-pillars-title">
+							Når tanke møter <span class="tone-accent">bevegelse.</span>
+						</h2>
 						<p>
-							Noen ganger trenger du bare et sted å samle tankene og se litt
-							klarere på dagene foran deg.
+							Movementum handler om å se hele mennesket. Ikke om å gjøre alt på
+							én gang, men om å skape rom for det som gir mening over tid.
 						</p>
-						<p>
-							Med små, overkommelige steg kan du skape plass til bevegelse,
-							balanse og det du ønsker mer av.
-						</p>
-						<a href="#arsplanlegger" class="text-link"
-							>Bli kjent med planleggeren</a
-						>
+					</div>
+					<div class="home-pillars-grid" id="retning">
+						<article class="home-pillar">
+							<div class="home-pillar-media">
+								<img
+									src="assets/images/optimized/DSC06080-1600.webp"
+						srcset="assets/images/optimized/DSC06080-480.webp 480w, assets/images/optimized/DSC06080-960.webp 960w, assets/images/optimized/DSC06080-1600.webp 1600w, assets/images/optimized/DSC06080-1761.webp 1761w"
+						sizes="(max-width: 759px) 100vw, (max-width: 1199px) 45vw, 33vw"
+									alt="En person skriver refleksjoner i en åpen planlegger"
+									width="1761"
+									height="1320"
+									loading="lazy"  decoding="async" />
+							</div>
+							<div class="home-pillar-copy">
+								<h3>Mindset</h3>
+								<p>
+									Hvordan vi møter utfordringer, tenker og gir oss selv
+									muligheten til å velge.
+								</p>
+							</div>
+						</article>
+						<article class="home-pillar">
+							<div class="home-pillar-media">
+								<img
+									src="assets/images/optimized/movement-1600.webp"
+						srcset="assets/images/optimized/movement-480.webp 480w, assets/images/optimized/movement-960.webp 960w, assets/images/optimized/movement-1600.webp 1600w, assets/images/optimized/movement-2200.webp 2200w"
+						sizes="(max-width: 759px) 100vw, (max-width: 1199px) 45vw, 33vw"
+									alt="Kvinne med treningsutstyr under en styrkeøvelse"
+									width="4239"
+									height="4239"
+									loading="lazy"  decoding="async" />
+							</div>
+							<div class="home-pillar-copy">
+								<h3>Movement</h3>
+								<p>
+									Bevegelse og aktivitet med plass til ulike forutsetninger og
+									livssituasjoner.
+								</p>
+							</div>
+						</article>
+						<article class="home-pillar">
+							<div class="home-pillar-media">
+								<img
+									src="assets/images/optimized/momentum2-1600.webp"
+						srcset="assets/images/optimized/momentum2-480.webp 480w, assets/images/optimized/momentum2-960.webp 960w, assets/images/optimized/momentum2-1600.webp 1600w, assets/images/optimized/momentum2-2048.webp 2048w"
+						sizes="(max-width: 759px) 100vw, (max-width: 1199px) 45vw, 33vw"
+									alt="Kvinne som hviler i en sofa i varmt lys"
+									width="2048"
+									height="1365"
+									loading="lazy"  decoding="async" />
+							</div>
+							<div class="home-pillar-copy">
+								<h3>Momentum</h3>
+								<p>
+									De små valgene vi gjentar, og retningen de kan skape over tid.
+								</p>
+							</div>
+						</article>
 					</div>
 				</div>
 			</section>
 
-			<section class="interlude" aria-label="Movementums tanke">
-				<div class="wrapper-narrow">
-					<p>Struktur skal gi ro, <span>ikke press.</span></p>
+			<!-- 05: A brief thematic hint. Full information stays on the retreat page. -->
+			<section
+				class="home-health home-health-teaser"
+				aria-labelledby="home-health-title">
+				<div class="home-health-photo">
+					<img
+						src="assets/images/optimized/helse-1463.webp"
+						srcset="assets/images/optimized/helse-480.webp 480w, assets/images/optimized/helse-960.webp 960w, assets/images/optimized/helse-1463.webp 1463w"
+						sizes="(max-width: 759px) 100vw, 50vw"
+						alt="Kvinne som snakker på scenen under en Movementum-presentasjon"
+						width="1463"
+						height="2048"
+						loading="lazy"  decoding="async" />
+				</div>
+				<div class="home-health-copy">
+					<div class="copy-content">
+						<p class="eyebrow">Et perspektiv fra januarretreatet</p>
+						<h2 id="home-health-title">
+							Plass til <span class="tone-accent">kvinnekroppen.</span>
+						</h2>
+						<p>
+							Hvordan kan vi bli mer nysgjerrige på kroppens behov gjennom ulike
+							livsfaser? På retreatet ønsker vi å gi rom for spørsmål og
+							samtaler om kvinnehelse.
+						</p>
+					</div>
 				</div>
 			</section>
 
+			<!-- 06: The real founder portrait; no invented credentials. -->
+			<section class="home-nora" id="nora" aria-labelledby="home-nora-title">
+				<div class="wrapper home-nora-grid">
+					<div class="home-nora-copy">
+						<p class="eyebrow">Grunnleggeren</p>
+						<h2 id="home-nora-title">
+							Møt <span class="tone-accent">Nora.</span>
+						</h2>
+						<p>
+							Nora står bak Movementum. Hun ønsker å bygge et sted der
+							refleksjon, bevegelse og opplevelser kan høre sammen – i et tempo
+							som passer den enkelte.
+						</p>
+					</div>
+					<figure class="home-nora-image">
+						<img
+							src="assets/images/optimized/nora2-1600.webp"
+						srcset="assets/images/optimized/nora2-480.webp 480w, assets/images/optimized/nora2-960.webp 960w, assets/images/optimized/nora2-1600.webp 1600w, assets/images/optimized/nora2-2200.webp 2200w"
+						sizes="(max-width: 759px) 100vw, 50vw"
+							alt="Nora demonstrerer en treningsøvelse med strikk"
+							width="5200"
+							height="4161"
+							loading="lazy"  decoding="async" />
+						<figcaption>Nora · Grunnlegger av Movementum</figcaption>
+					</figure>
+				</div>
+			</section>
+
+			<!-- 07: Real current product, clearly secondary to the brand and retreat. -->
 			<section
-				class="product"
+				class="product home-product"
 				id="arsplanlegger"
 				aria-labelledby="product-title">
 				<div class="wrapper product-grid">
 					<div class="product-photo">
-						<picture>
-							<source
+						<picture
+							><source
 								srcset="assets/images/planner-mobile.jpg"
 								media="(max-width: 680px)" />
 							<img
-								src="assets/images/planner.jpg"
-								alt="To fysiske Movementum årsplanleggere med spiralrygg"
+								src="assets/images/optimized/planner-428.webp"
+						srcset="assets/images/optimized/planner-428.webp 428w"
+						sizes="(max-width: 759px) 100vw, 50vw"
+								alt="To fysiske Movementum-årsplanleggere med spiralrygg"
 								width="428"
 								height="640"
-								loading="lazy" />
-						</picture>
+								loading="lazy"
+						 decoding="async" /></picture>
 					</div>
 					<div class="product-copy">
-						<p class="eyebrow">Årsplanlegger 2026</p>
-						<h2 id="product-title">Et sted <span class="tone-accent">å begynne.</span></h2>
+						<p class="eyebrow">Et praktisk verktøy · Årsplanlegger 2026</p>
+						<h2 id="product-title">
+							Ta med deg <span class="tone-accent">de små stegene.</span>
+						</h2>
 						<p>
-							For tanker som trenger litt plass. For planer som kan få vokse i
-							sitt eget tempo.
+							En planlegger for mål, vaner, refleksjon og oversikt over ukene
+							som kommer.
 						</p>
 						<p>
-							Årsplanleggeren hjelper deg å få oversikt, sette mål og justere
-							kursen underveis – uten at alt må være perfekt.
+							Et fysisk verktøy som gjør det enklere å vende tilbake til det som
+							er viktig for deg – i din egen rytme.
 						</p>
 						<div
 							class="product-lines"
-							aria-label="Hva planleggeren kan hjelpe deg med">
-							<p>Samle tanker og planer</p>
-							<p>Velge det som er viktig for deg</p>
-							<p>Ta ett steg om gangen</p>
+							aria-label="Hva planleggeren kan brukes til">
+							<p>Refleksjon og mål</p>
+							<p>Vaner og retning</p>
+							<p>Planer for hverdagen</p>
 						</div>
 						<a
 							class="button button-outline"
-							href="https://www.movementum.shop/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Se planleggeren i nettbutikken</a
-						>
-						<p class="product-note">
-							Dette er 2026-utgaven. Se nettbutikken for oppdatert utvalg og
-							tilgjengelighet.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="life-section" aria-labelledby="life-title">
-				<div class="wrapper life-layout">
-					<div class="life-feature">
-						<h2 id="life-title">Små øyeblikk. <span class="tone-accent">Mer oversikt.</span></h2>
-						<figure class="life-portrait">
-							<img
-								src="assets/images/planner-detail-02.jpg"
-								alt="Kvinne sitter og blar i Movementum-planleggeren"
-								width="505"
-								height="640"
-								loading="lazy" />
-						</figure>
-					</div>
-					<div class="life-story">
-						<p class="life-introduction">
-							Et sted for refleksjon – hjemme, etter en tur eller når du trenger
-							et øyeblikk for deg selv.
-						</p>
-						<figure class="life-story-photo">
-							<img
-								src="assets/images/planner-detail-01.jpg"
-								alt="Kvinne sitter på sofaen og leser i Movementum-planleggeren"
-								width="512"
-								height="640"
-								loading="lazy" />
-							<figcaption>Et lite pusterom, midt i hverdagen.</figcaption>
-						</figure>
-					</div>
-				</div>
-			</section>
-
-			<section class="ending split-section" aria-labelledby="ending-title">
-				<div class="ending-copy">
-					<div class="copy-content">
-						<p class="eyebrow">Små steg. Eget tempo.</p>
-						<h2 id="ending-title">Begynn <span class="tone-accent">der du er.</span></h2>
-						<p>
-							Du trenger ikke ha alle svarene. Bare et lite øyeblikk til å
-							kjenne etter hva som betyr noe for deg.
-						</p>
-						<a
-							class="button button-outline"
-							href="https://www.movementum.shop/"
+							href="https://www.movementum.shop/products/movementum-arskalender-2026-fra-tanke-til-handling"
 							target="_blank"
 							rel="noopener noreferrer"
 							>Se årsplanleggeren</a
 						>
+						<p class="product-note">
+							2026-utgaven er vist. Sjekk nettbutikken for tilgjengelighet og
+							oppdatert utvalg.
+						</p>
 					</div>
-				</div>
-				<div class="ending-image">
-					<img
-						src="assets/images/closing.webp"
-						alt="Sollys faller over en sti i naturen"
-						width="1200"
-						height="750"
-						loading="lazy" />
 				</div>
 			</section>
 		</main>
-
 		<footer class="site-footer" id="kontakt">
 			<div class="wrapper footer-main">
 				<div>
 					<a href="#top" class="footer-brand">movementum</a>
 					<p>mindset · movement · momentum</p>
-					<p class="header-contact-note">Kontaktinformasjon oppdateres når den er bekreftet.</p>
+					<p class="header-contact-note">
+						Kontaktinformasjon oppdateres når den er bekreftet.
+					</p>
 				</div>
 				<div class="footer-links">
-					<a href="#om">Om Movementum</a
-					><a href="#arsplanlegger">Årsplanleggeren</a
-					><a
+					<a href="retreat.html">Retreat</a>
+					<a href="#om">Om Movementum</a>
+					<a href="#nora">Møt Nora</a>
+					<a href="#arsplanlegger">Årsplanlegger</a>
+					<a
 						href="https://www.movementum.shop/"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -299,10 +376,10 @@
 				</div>
 			</div>
 			<div class="wrapper footer-bottom">
-				<span>© 2026 Movementum</span><span>Små steg, i ditt eget tempo.</span>
+				<span>© 2026 Movementum</span><span>Mindset · Movement · Momentum</span>
 			</div>
 		</footer>
-			<script defer src="js/header-navigation.js"></script>
-			<script src="js/page-navigation.js"></script>
+		<script defer src="js/header-navigation.js"></script>
+		<script src="js/page-navigation.js"></script>
 	</body>
 </html>

@@ -9,11 +9,18 @@
 			content="Movementum Retreat 16.–17. januar 2027 på Panorama Hotell &amp; Resort. En helg for kvinner med kunnskap, bevegelse og fellesskap."
 			name="description" />
 		<title>Movementum Retreat | Panorama, 16.–17. januar 2027</title>
-		<link href="assets/images/brand-mark.png" rel="icon" type="image/png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="nb_NO" />
+		<meta property="og:site_name" content="Movementum" />
+		<meta property="og:title" content="Movementum Retreat | Panorama, 16.–17. januar 2027" />
+		<meta property="og:description" content="Movementum Retreat 16.–17. januar 2027 på Panorama Hotell &amp; Resort. En helg for kvinner med kunnskap, bevegelse og fellesskap." />
+		<meta name="twitter:card" content="summary" />
+		<link href="assets/images/favicon.png" rel="icon" type="image/png" />
 		<link
 			as="image"
-			href="assets/images/retreat-video-poster.jpg"
+			href="assets/images/optimized/retreat-video-poster-1600.webp"
 			rel="preload" />
+		<link href="https://player.vimeo.com" rel="preconnect" crossorigin />
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
 		<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
 		<link
@@ -35,7 +42,7 @@
 		<header class="site-header" id="top">
 			<div class="header-inner wrapper">
 				<a class="brand" href="index.html" aria-label="Movementum – til forsiden">
-					<img src="assets/images/logo.png" width="640" height="323" alt="Movementums symbol" />
+					<img src="assets/images/logo.png" width="323" height="323" alt="" />
 					<span>movementum</span>
 				</a>
 				<nav class="main-nav" aria-label="Hovedmeny">
@@ -91,23 +98,22 @@
 					</div>
 				</div>
 				<div class="hero-photo retreat-hero-photo">
-					<!-- Vimeo-video: lim inn hele video-URL-en i data-vimeo-url etter opplasting.
-                     Frem til da vises den eksisterende lokale videoen som forhåndsvisning. -->
-					<div class="retreat-vimeo-frame" data-vimeo-url="">
+					<!-- Vimeo-bakgrunn: Panorama Hotel – MOVEMENTUM. Lokal MP4 brukes som reserve. -->
+					<div class="retreat-vimeo-frame" data-vimeo-url="https://vimeo.com/1243190042">
 						<video
 							aria-hidden="true"
-							autoplay=""
 							loop=""
 							muted=""
 							playsinline=""
-							poster="assets/images/retreat-video-poster.jpg"
-							preload="metadata"
+							poster="assets/images/optimized/retreat-video-poster-1600.webp"
+							preload="none"
 							tabindex="-1">
 							<source
 								src="assets/video/hjemmesidevideo-retreat.mp4"
 								type="video/mp4" />
 						</video>
-										<div class="hero-floating-note retreat-event-card" aria-label="Sted og dato for retreatet">
+					</div>
+					<div class="hero-floating-note retreat-event-card" aria-label="Sted og dato for retreatet">
 						<span>Panorama Hotell &amp; Resort</span>
 						<strong>16.–17. januar 2027</strong>
 					</div>
@@ -150,8 +156,10 @@
 					alt="Interiør med sittegrupper og hengende lamper hos Panorama Hotell &amp; Resort"
 					height="1365"
 					loading="lazy"
-					src="assets/images/interior.jpg"
-					width="2048" />
+					src="assets/images/optimized/interior-1600.webp"
+						srcset="assets/images/optimized/interior-480.webp 480w, assets/images/optimized/interior-960.webp 960w, assets/images/optimized/interior-1600.webp 1600w, assets/images/optimized/interior-2048.webp 2048w"
+						sizes="100vw"
+					width="2048"  decoding="async" />
 			</section>
 
 			<section
@@ -206,11 +214,13 @@
 				aria-label="Panorama Hotell &amp; Resort – basseng"
 				class="retreat-photo-break">
 				<img
-					alt="Bassengområde hos Panorama Hotell &amp; Resort"
-					height="1365"
+					alt="Kvinne utfører en tøyeøvelse på treningsmatte"
+					height="4161"
 					loading="lazy"
-					src="assets/images/1.jpg"
-					width="2048" />
+					src="assets/images/optimized/1-jpg-1600.webp"
+						srcset="assets/images/optimized/1-jpg-480.webp 480w, assets/images/optimized/1-jpg-960.webp 960w, assets/images/optimized/1-jpg-1600.webp 1600w, assets/images/optimized/1-jpg-2200.webp 2200w"
+						sizes="100vw"
+					width="5200"  decoding="async" />
 			</section>
 
 			<section
@@ -285,8 +295,10 @@
 						alt="To kvinner nyter noe å drikke sammen i et avslappende spa-miljø"
 						height="1365"
 						loading="lazy"
-						src="assets/images/drinking.jpg"
-						width="2048" />
+						src="assets/images/optimized/drinking-1600.webp"
+						srcset="assets/images/optimized/drinking-480.webp 480w, assets/images/optimized/drinking-960.webp 960w, assets/images/optimized/drinking-1600.webp 1600w, assets/images/optimized/drinking-2048.webp 2048w"
+						sizes="(max-width: 759px) 100vw, 50vw"
+						width="2048"  decoding="async" />
 				</figure>
 				<div class="moment-copy">
 					<div class="copy-content">
@@ -328,8 +340,10 @@
 							alt="Nora, grunnleggeren av Movementum, holder en presentasjon"
 							height="1365"
 							loading="lazy"
-							src="assets/images/nora.jpg"
-							width="2048" />
+							src="assets/images/optimized/nora-1600.webp"
+						srcset="assets/images/optimized/nora-480.webp 480w, assets/images/optimized/nora-960.webp 960w, assets/images/optimized/nora-1600.webp 1600w, assets/images/optimized/nora-2048.webp 2048w"
+						sizes="(max-width: 759px) 100vw, 50vw"
+							width="2048"  decoding="async" />
 					</figure>
 				</div>
 			</section>
@@ -417,11 +431,13 @@
 						</div>
 						<figure class="retreat-practical-photo">
 							<img
-								src="assets/images/DSC04040.jpg"
+								src="assets/images/optimized/DSC04040-1600.webp"
+						srcset="assets/images/optimized/DSC04040-480.webp 480w, assets/images/optimized/DSC04040-960.webp 960w, assets/images/optimized/DSC04040-1600.webp 1600w, assets/images/optimized/DSC04040-2048.webp 2048w"
+						sizes="(max-width: 759px) 100vw, 50vw"
 								width="2048"
 								height="1365"
 								loading="lazy"
-								alt="Kvinne med en kopp ser ut over sjøen fra Panorama" />
+								alt="Kvinne med en kopp ser ut over sjøen fra Panorama"  decoding="async" />
 							<figcaption>Rom for både aktivitet og gode pauser.</figcaption>
 						</figure>
 					</div>
@@ -518,8 +534,10 @@
 						alt="Kvinne slapper av i et boblebad"
 						height="2048"
 						loading="lazy"
-						src="assets/images/relax.jpg"
-						width="1463" />
+						src="assets/images/optimized/relax-1463.webp"
+						srcset="assets/images/optimized/relax-480.webp 480w, assets/images/optimized/relax-960.webp 960w, assets/images/optimized/relax-1463.webp 1463w"
+						sizes="(max-width: 759px) 100vw, 50vw"
+						width="1463"  decoding="async" />
 				</div>
 			</section>
 		</main>
