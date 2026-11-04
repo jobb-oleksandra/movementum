@@ -18,6 +18,7 @@
 		<link rel="preload" as="image" href="assets/images/optimized/1-1080.webp"
             imagesrcset="assets/images/optimized/1-480.webp 480w, assets/images/optimized/1-960.webp 960w, assets/images/optimized/1-1080.webp 1080w"
             imagesizes="(max-width: 759px) 100vw, (max-width: 1199px) 100vw, 50vw" />
+		<link rel="preconnect" href="https://player.vimeo.com" crossorigin />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -27,7 +28,7 @@
 		<link rel="stylesheet" href="css/header-navigation.css" />
 
 		<link rel="stylesheet" href="css/hero-page-transition.css" />
-		<link rel="stylesheet" href="css/home-brief.css" />
+		<link rel="stylesheet" href="css/home-brief.css?v=vimeo-responsive-4" />
 	</head>
 	<body class="home-page">
 		<a class="skip-link" href="#main">Hopp til innholdet</a>
@@ -105,7 +106,7 @@
 						sizes="(max-width: 759px) 100vw, (max-width: 1199px) 100vw, 50vw"
 						alt="Kvinne som tøyer overkroppen under en treningsøvelse"
 						width="1080"
-						height="810"
+						height="1080"
 						fetchpriority="high"  decoding="async" />
 					<div class="hero-floating-note" aria-hidden="true">
 						<span>Movementum</span><strong>i ditt tempo</strong>
@@ -117,15 +118,17 @@
                  programme and detailed women's-health content belong on retreat.html. -->
 			<section class="home-retreat" aria-labelledby="home-retreat-title">
 				<div class="wrapper home-retreat-grid">
-					<figure class="home-retreat-photo">
-						<img
-							src="assets/images/optimized/retreat-video-poster-1600.webp"
-						srcset="assets/images/optimized/retreat-video-poster-480.webp 480w, assets/images/optimized/retreat-video-poster-960.webp 960w, assets/images/optimized/retreat-video-poster-1600.webp 1600w"
-						sizes="(max-width: 759px) 100vw, (max-width: 1199px) 100vw, 50vw"
-							alt="Fasaden til Panorama Hotell &amp; Resort"
-							width="1600"
-							height="900"
-							loading="lazy"  decoding="async" />
+					<figure class="home-retreat-photo" aria-label="Video fra Panorama Hotell &amp; Resort">
+						<!-- Samme Vimeo-video som i retreat.html; originalt bildefelt beholdes. -->
+						<div class="retreat-vimeo-frame home-retreat-video" inert
+							data-vimeo-url="https://vimeo.com/1243190042"
+							data-vimeo-square-url="https://vimeo.com/1243252897"
+							data-vimeo-lazy>
+							<video aria-hidden="true" muted loop playsinline preload="none" draggable="false"
+								poster="assets/images/optimized/retreat-video-poster-1600.webp" tabindex="-1">
+								<source src="assets/video/hjemmesidevideo-retreat.mp4" type="video/mp4" />
+							</video>
+						</div>
 					</figure>
 					<div class="home-retreat-copy">
 						<p class="eyebrow">
@@ -380,6 +383,7 @@
 			</div>
 		</footer>
 		<script defer src="js/header-navigation.js"></script>
+		<script defer src="js/retreat-vimeo.js?v=vimeo-responsive-4"></script>
 		<script src="js/page-navigation.js"></script>
 	</body>
 </html>

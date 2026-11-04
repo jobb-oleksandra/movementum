@@ -432,3 +432,75 @@
     letter-spacing: .022em;
   }
 }
+
+/* Homepage retreat teaser: video replaces the poster without changing the
+   original image box's aspect ratio at any breakpoint. */
+.home-retreat-photo {
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* Paint outside the video clipping/compositing layer. Cover its outermost
+   2px with the section color without changing layout or scaling the image. */
+.home-retreat-photo::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  border: 3px solid var(--milk);
+  pointer-events: none;
+}
+.home-retreat-photo .home-retreat-video {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4.05;
+  overflow: hidden;
+  pointer-events: none;
+  background: #dad0c4 url('../assets/images/optimized/retreat-video-poster-1600.webp') center / cover no-repeat;
+}
+.home-retreat-photo::selection,
+.home-retreat-photo *::selection {
+  background: transparent;
+}
+.home-retreat-photo .home-retreat-video > video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 39%;
+  filter: saturate(.85);
+}
+.home-retreat-photo .home-retreat-video > iframe {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  border: 0;
+  /* A stable source-sized viewport prevents Vimeo's internal layout from changing at
+     each browser zoom/resize. JS scales this whole surface to cover the box
+     with the existing 12% overscan; overflow is clipped by the parent. */
+  width: var(--vimeo-player-width, 1920px);
+  height: 1080px;
+  max-width: none;
+  max-height: none;
+  transform: translate(-50%, -50%) scale(var(--home-video-scale, 1));
+  transform-origin: center;
+  outline: none;
+  box-shadow: none;
+  pointer-events: none;
+  opacity: 0;
+}
+.home-retreat-photo .home-retreat-video.is-vimeo > iframe { opacity: 1; }
+.home-retreat-photo .home-retreat-video.is-vimeo > video { display: none; }
+@media (min-width: 760px) and (max-width: 1020px) {
+  .home-retreat-photo .home-retreat-video { aspect-ratio: 4 / 4.7; }
+}
+@media (max-width: 759px) {
+  .home-retreat-photo .home-retreat-video { aspect-ratio: 1.47; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-retreat-photo .home-retreat-video > iframe { display: none; }
+}

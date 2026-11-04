@@ -49,8 +49,8 @@
 	top: 50%;
 	left: 50%;
 	border: 0;
-	width: max(100cqw, 177.78cqh);
-	height: max(100cqh, 56.25cqw);
+	width: max(100cqw, var(--vimeo-cover-width, 177.78cqh));
+	height: max(100cqh, var(--vimeo-cover-height, 56.25cqw));
 	transform: translate(-50%, -50%);
 	pointer-events: none;
 }
