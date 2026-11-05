@@ -458,9 +458,6 @@
 	}
 }
 @media (min-width: 760px) and (max-width: 1020px) {
-	.retreat-page .retreat-hero .hero-copy {
-		padding-inline: clamp(25px, 4vw, 48px);
-	}
 	.retreat-page .retreat-hero .hero-path {
 		gap: 8px 5px;
 	}
@@ -476,14 +473,8 @@
 	}
 }
 @media (max-width: 759px) {
-	.retreat-page .retreat-hero .hero-copy {
-		padding-block: 52px 56px;
-	}
 	.retreat-page .retreat-hero h1 {
 		font-size: var(--type-hero);
-	}
-	.retreat-page .retreat-hero-photo {
-		min-height: clamp(320px, 78vw, 540px);
 	}
 	.retreat-page .retreat-hero-photo video {
 		object-position: 60% center;
@@ -1004,34 +995,49 @@
    Only layout and sizing. No copy, imagery or shared styles are changed.
    ===================================================================== */
 
-/* Keep the video window square or landscape at every viewport size. */
-@media (min-width: 1200px) {
+/* The opening can grow with its copy. Give the film a minimum height in
+   stacked layouts so zoom and a short viewport cannot collapse it. */
+.retreat-page .retreat-hero {
+	--header-height: 81px;
+	--film-min: clamp(260px, 56.25vw, 620px);
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-rows: auto 1fr;
+	min-height: calc(100vh - var(--header-height));
+	min-height: calc(100svh - var(--header-height));
+}
+.retreat-page .retreat-hero > .hero-copy {
+	min-width: 0;
+	padding: clamp(24px, 4.5svh, 56px) var(--gutter);
+}
+.retreat-page .retreat-hero .copy-content {
+	max-width: 620px;
+}
+.retreat-page .retreat-hero-photo {
+	width: 100%;
+	height: auto;
+	min-height: var(--film-min);
+}
+@media (max-width: 759px) {
 	.retreat-page .retreat-hero {
-		min-height: 0;
-	}
-
-	.retreat-page .retreat-hero-photo {
-		min-height: 0;
+		--header-height: 71px;
+		--film-min: clamp(235px, 76vw, 440px);
 	}
 }
-
-@media (min-width: 760px) and (max-width: 1199px) {
+/* Short landscape tablets have room for two columns even at browser zoom. */
+@media (min-width: 700px) and (min-aspect-ratio: 6/5), (min-width: 1200px) {
 	.retreat-page .retreat-hero {
-		grid-template-columns: minmax(0, 1fr);
-		min-height: 0;
+		--film-min: clamp(280px, 27vw, 520px);
+		grid-template-columns: minmax(0, .98fr) minmax(0, 1.02fr);
+		grid-template-rows: auto;
 	}
-	.retreat-page .retreat-hero .hero-copy {
-		min-height: 0;
-		padding: clamp(46px, 6vw, 78px) var(--gutter);
+	.retreat-page .retreat-hero > .hero-copy {
+		padding: clamp(22px, 5svh, 72px) clamp(24px, 4vw, 92px);
 	}
-	.retreat-page .retreat-hero .hero-copy .copy-content {
-		max-width: 660px;
+	.retreat-page .retreat-hero .copy-content {
+		max-width: 470px;
 	}
-	.retreat-page .retreat-hero-photo {
-		min-height: 0;
-		height: min(67vw, 630px);
-		aspect-ratio: auto;
-	}
+}
+@media (min-width: 760px) and (max-width: 1199px) {
 	.retreat-page .retreat-hero-photo .retreat-event-card {
 		width: max-content;
 		max-width: calc(100% - 44px);
@@ -1042,19 +1048,6 @@
 }
 
 @media (max-width: 759px) {
-	/* The film should never become a narrow portrait panel. */
-	.retreat-page .retreat-hero-photo,
-	.retreat-page .retreat-hero .hero-photo {
-		min-height: 0;
-		width: 100%;
-		height: auto;
-		aspect-ratio: 1.1 / 1;
-		max-height: 580px;
-	}
-	.retreat-page .retreat-hero-photo .retreat-vimeo-frame {
-		position: absolute;
-		inset: 0;
-	}
 	/* A small location/date label rather than a large opaque box. */
 	.retreat-page .retreat-hero-photo .retreat-event-card {
 		left: auto;
