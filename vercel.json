@@ -2,6 +2,12 @@
 	"$schema": "https://openapi.vercel.sh/vercel.json",
 	"trailingSlash": false,
 	"redirects": [
+		{
+			"source": "/:path*",
+			"has": [{ "type": "host", "value": "movementum.no" }],
+			"destination": "https://www.movementum.no/:path*",
+			"permanent": true
+		},
 		{ "source": "/index.html", "destination": "/", "permanent": true },
 		{ "source": "/privacy-policy", "destination": "/personvern.html", "permanent": true },
 		{ "source": "/pages/privacy-policy", "destination": "/personvern.html", "permanent": true },
