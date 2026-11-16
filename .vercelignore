@@ -3,3 +3,6 @@
 .vscode
 .claude
 *.code-workspace
+.env*
+.vercel
+.gitignore
