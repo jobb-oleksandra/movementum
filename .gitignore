@@ -1,0 +1,7 @@
+# Lokale verktøyfiler
+.claude/
+.vercel/
+
+# System
+.DS_Store
+Thumbs.db
