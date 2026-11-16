@@ -11,6 +11,7 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="nb_NO" />
 		<meta property="og:site_name" content="Movementum" />
+		<meta property="og:url" content="https://www.movementum.no/" />
 		<meta
 			property="og:title"
 			content="Movementum | Mindset · Movement · Momentum" />
@@ -19,13 +20,16 @@
 			content="Movementum samler refleksjon, bevegelse og opplevelser. Bli kjent med merkevaren, møt Nora, oppdag januarretreatet og se årsplanleggeren." />
 		<meta name="twitter:card" content="summary" />
 		<link rel="icon" href="assets/images/favicon.png" type="image/png" />
+		<meta property="og:image" content="https://www.movementum.no/assets/images/optimized/1-1080.webp" />
+		<link rel="apple-touch-icon" href="assets/images/logo.png" />
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="canonical" href="https://www.movementum.no/" />
 		<link
 			rel="preload"
 			as="image"
 			href="assets/images/optimized/1-1080.webp"
 			imagesrcset="assets/images/optimized/1-480.webp 480w, assets/images/optimized/1-960.webp 960w, assets/images/optimized/1-1080.webp 1080w"
 			imagesizes="(max-width: 759px) 100vw, (max-width: 1199px) 100vw, 50vw" />
-		<link rel="preconnect" href="https://player.vimeo.com" crossorigin />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -36,6 +40,7 @@
 
 		<link rel="stylesheet" href="css/hero-page-transition.css" />
 		<link rel="stylesheet" href="css/home-brief.css?v=vimeo-responsive-4" />
+		<link rel="stylesheet" href="css/consent.css" />
 	</head>
 	<body class="home-page">
 		<a class="skip-link" href="#main">Hopp til innholdet</a>
@@ -427,9 +432,7 @@
 				<div>
 					<a href="#top" class="footer-brand">movementum</a>
 					<p>mindset · movement · momentum</p>
-					<p class="header-contact-note">
-						Kontaktinformasjon oppdateres når den er bekreftet.
-					</p>
+					<p class="header-contact-note"><a href="mailto:post@movementum.no">post@movementum.no</a></p>
 				</div>
 				<div class="footer-links">
 					<a href="retreat.html">Retreat</a>
@@ -445,9 +448,17 @@
 				</div>
 			</div>
 			<div class="wrapper footer-bottom">
-				<span>© 2026 Movementum</span><span>Mindset · Movement · Momentum</span>
+				<span>© 2026 Movementum</span>
+				<span class="footer-legal"
+					><a href="personvern.html">Personvern og informasjonskapsler</a
+					><button type="button" class="consent-link" data-consent-open>
+						Endre samtykke
+					</button></span
+				>
+				<span>Mindset · Movement · Momentum</span>
 			</div>
 		</footer>
+		<script defer src="js/consent.js"></script>
 		<script defer src="js/header-navigation.js"></script>
 		<script defer src="js/retreat-vimeo.js?v=vimeo-responsive-4"></script>
 		<script src="js/page-navigation.js"></script>

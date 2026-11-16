@@ -1,0 +1,5 @@
+# Arbeidsnotater og utviklerfiler skal ikke publiseres.
+*.md
+.vscode
+.claude
+*.code-workspace

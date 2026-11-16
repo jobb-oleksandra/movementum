@@ -12,15 +12,19 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="nb_NO" />
 		<meta property="og:site_name" content="Movementum" />
+		<meta property="og:url" content="https://www.movementum.no/retreat.html" />
 		<meta property="og:title" content="Movementum Retreat | Panorama, 16.–17. januar 2027" />
 		<meta property="og:description" content="Movementum Retreat 16.–17. januar 2027 på Panorama Hotell &amp; Resort. En helg for kvinner med kunnskap, bevegelse og fellesskap." />
 		<meta name="twitter:card" content="summary" />
 		<link href="assets/images/favicon.png" rel="icon" type="image/png" />
+		<meta property="og:image" content="https://www.movementum.no/assets/images/optimized/retreat-video-poster-1600.webp" />
+		<link rel="apple-touch-icon" href="assets/images/logo.png" />
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="canonical" href="https://www.movementum.no/retreat.html" />
 		<link
 			as="image"
 			href="assets/images/optimized/retreat-video-poster-1600.webp"
 			rel="preload" />
-		<link href="https://player.vimeo.com" rel="preconnect" crossorigin />
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
 		<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
 		<link
@@ -31,11 +35,13 @@
 		<!-- Only retreat layout additions; typography/buttons use styles.css. -->
 		<link href="css/retreat.css?v=hero-layout-5" rel="stylesheet" />
 		<script defer="" src="js/retreat-parallax.js"></script>
+		<script defer src="js/consent.js"></script>
 		<script defer="" src="js/retreat-vimeo.js?v=vimeo-responsive-4"></script>
 		<script defer src="js/retreat-faq.js"></script>
 			<link rel="stylesheet" href="css/header-navigation.css?v=logo-aligned-2" />
 	
 		<link rel="stylesheet" href="css/hero-page-transition.css?v=hero-layout-5" />
+		<link rel="stylesheet" href="css/consent.css" />
 	</head>
 	<body class="retreat-page">
 		<a class="skip-link" href="#main">Hopp til innholdet</a>
@@ -556,7 +562,7 @@
 				<div>
 					<a class="footer-brand" href="index.html">movementum</a>
 					<p>mindset · movement · momentum</p>
-					<p class="header-contact-note">Kontaktinformasjon oppdateres når den er bekreftet.</p>
+					<p class="header-contact-note"><a href="mailto:post@movementum.no">post@movementum.no</a></p>
 				</div>
 				<div class="footer-links">
 					<a href="index.html">Hjem</a
@@ -566,8 +572,14 @@
 				</div>
 			</div>
 			<div class="wrapper footer-bottom">
-				<span>© 2026 Movementum</span
-				><span>Movementum Retreat · Panorama · Januar 2027</span>
+				<span>© 2026 Movementum</span>
+				<span class="footer-legal"
+					><a href="personvern.html">Personvern og informasjonskapsler</a
+					><button type="button" class="consent-link" data-consent-open>
+						Endre samtykke
+					</button></span
+				>
+				<span>Movementum Retreat · Panorama · Januar 2027</span>
 			</div>
 		</footer>
 			<script defer src="js/header-navigation.js"></script>

@@ -156,13 +156,35 @@
         window.addEventListener('resize', onResize, {passive:true});
       }
     };
+    // Without consent (js/consent.js) Vimeo is never contacted: the local MP4
+    // plays instead, and Vimeo starts only if the visitor later accepts.
+    const hasConsent = () => window.MovementumConsent?.has('media') === true;
+    const playLocalOnly = () => {
+      frame.dataset.vimeoState = 'fallback';
+      if (!fallback) return;
+      fallback.preload = 'metadata';
+      fallback.play().catch(() => { frame.dataset.vimeoState = 'poster'; });
+    };
+    let started = false;
+    const begin = () => {
+      if (started) return;
+      if (!hasConsent()) { playLocalOnly(); return; }
+      started = true;
+      fallback?.pause();
+      start();
+    };
+    document.addEventListener('movementum:consent', event => {
+      if (event.detail?.media && visible) begin();
+    });
+    let visible = false;
     if (frame.hasAttribute('data-vimeo-lazy') && 'IntersectionObserver' in window) {
       const observer = new IntersectionObserver(entries => {
-        if (entries.some(entry => entry.isIntersecting)) { observer.disconnect(); start(); }
+        if (entries.some(entry => entry.isIntersecting)) { observer.disconnect(); visible = true; begin(); }
       }, {rootMargin: '250px'});
       observer.observe(frame);
     } else {
-      start();
+      visible = true;
+      begin();
     }
   });
 })();

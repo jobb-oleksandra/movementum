@@ -1,0 +1,13 @@
+{
+	"name": "Movementum",
+	"short_name": "Movementum",
+	"lang": "nb",
+	"start_url": "index.html",
+	"display": "browser",
+	"background_color": "#f7f4ed",
+	"theme_color": "#f7f4ed",
+	"icons": [
+		{ "src": "assets/images/logo.png", "sizes": "323x323", "type": "image/png" },
+		{ "src": "assets/images/favicon.png", "sizes": "192x139", "type": "image/png" }
+	]
+}

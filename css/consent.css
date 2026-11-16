@@ -1,0 +1,189 @@
+/* Samtykkebanner – samme palett og typografi som resten av nettstedet.
+   Begge valgene har lik vekt (krav fra Datatilsynet / ekomloven). */
+.consent-banner {
+	position: fixed;
+	z-index: 1000;
+	left: 16px;
+	right: 16px;
+	bottom: 16px;
+	max-width: 980px;
+	margin-inline: auto;
+	padding: clamp(18px, 2.4vw, 28px) clamp(18px, 3vw, 34px);
+	background: var(--milk, #fbfaf7);
+	color: var(--brown, #4f3e3a);
+	border: 1px solid var(--line, rgba(79, 62, 58, 0.21));
+	box-shadow: 0 18px 50px rgba(79, 62, 58, 0.16);
+	font: 400 var(--type-small, 15px) / 1.6 var(--font, Arial, sans-serif);
+	animation: consent-in 0.35s ease-out both;
+}
+.consent-banner[hidden] {
+	display: none;
+}
+.consent-inner {
+	display: flex;
+	align-items: center;
+	gap: clamp(18px, 3vw, 40px);
+}
+.consent-text {
+	flex: 1;
+}
+.consent-banner h2 {
+	margin: 0 0 6px;
+	font: 500 clamp(20px, 1.4vw + 14px, 26px) / 1.2 var(--font-editorial, Georgia, serif);
+	color: var(--ink-deep, #493834);
+	text-transform: none;
+	letter-spacing: 0;
+}
+.consent-banner p {
+	margin: 0;
+	color: var(--brown-soft, #675a55);
+}
+.consent-banner a {
+	color: var(--ink-mauve, #77565d);
+	text-underline-offset: 3px;
+}
+.consent-actions {
+	display: flex;
+	gap: 10px;
+	flex-shrink: 0;
+}
+.consent-button {
+	min-height: 48px;
+	min-width: 150px;
+	padding: 12px 20px;
+	border: 1px solid var(--brown, #4f3e3a);
+	border-radius: 0;
+	background: transparent;
+	color: var(--brown, #4f3e3a);
+	font: 500 var(--type-small, 15px) / 1.3 var(--font, Arial, sans-serif);
+	letter-spacing: 0.06em;
+	cursor: pointer;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+}
+.consent-button:hover,
+.consent-button:focus-visible {
+	background: var(--brown, #4f3e3a);
+	color: var(--cream, #f8f5f3);
+}
+.consent-button:focus-visible {
+	outline: 2px solid var(--pink-dark, #986972);
+	outline-offset: 3px;
+}
+/* Lenke-knapp i footeren for å åpne innstillingene igjen. */
+.consent-link {
+	padding: 0;
+	border: 0;
+	background: none;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+.footer-legal {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 22px;
+}
+.footer-legal a {
+	color: inherit;
+	text-underline-offset: 3px;
+}
+@keyframes consent-in {
+	from {
+		opacity: 0;
+		transform: translateY(14px);
+	}
+}
+@media (max-width: 759px) {
+	.consent-banner {
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		max-height: calc(100vh - 20px);
+		overflow-y: auto;
+	}
+	.consent-inner {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.consent-actions {
+		flex-direction: column-reverse;
+	}
+	.consent-button {
+		width: 100%;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.consent-banner {
+		animation: none;
+	}
+}
+.footer-bottom {
+	flex-wrap: wrap;
+}
+
+/* Juridiske sider (personvern.html, 404.html). */
+.legal-page main {
+	padding: clamp(48px, 7vw, 110px) 0 clamp(64px, 8vw, 120px);
+}
+.legal-page h1 {
+	font: 400 var(--type-hero) / 1.1 var(--font-editorial);
+	margin-bottom: 14px;
+}
+.legal-page main h2 {
+	font: 500 clamp(22px, 1.2vw + 16px, 30px) / 1.25 var(--font-editorial);
+	margin: 44px 0 10px;
+}
+.legal-page main p,
+.legal-page main li {
+	font-size: var(--type-copy);
+	color: var(--ink-stone);
+}
+.legal-page main p + p {
+	margin-top: 12px;
+}
+.legal-page main ul {
+	padding-left: 1.2em;
+	margin: 10px 0 0;
+}
+.legal-page main a:not(.button) {
+	color: var(--ink-mauve);
+	text-underline-offset: 3px;
+}
+.legal-updated {
+	font-size: var(--type-label);
+	letter-spacing: 0.06em;
+}
+.legal-table {
+	width: 100%;
+	margin-top: 14px;
+	border-collapse: collapse;
+	font-size: var(--type-small);
+}
+.legal-table th,
+.legal-table td {
+	padding: 10px 12px 10px 0;
+	border-bottom: 1px solid var(--line);
+	text-align: left;
+	vertical-align: top;
+}
+.legal-table th {
+	font-weight: 600;
+	color: var(--ink-deep);
+}
+.legal-table-wrap {
+	overflow-x: auto;
+}
+.legal-placeholder {
+	background: var(--pink-pale);
+	padding: 0 4px;
+}
+.legal-page .legal-actions {
+	margin-top: 32px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
