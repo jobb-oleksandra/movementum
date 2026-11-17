@@ -3,9 +3,9 @@
 	"trailingSlash": false,
 	"redirects": [
 		{
-			"source": "/:path*",
+			"source": "/(.*)",
 			"has": [{ "type": "host", "value": "movementum.no" }],
-			"destination": "https://www.movementum.no/:path*",
+			"destination": "https://www.movementum.no/$1",
 			"permanent": true
 		},
 		{ "source": "/index.html", "destination": "/", "permanent": true },
