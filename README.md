@@ -1,13 +1,47 @@
-# Movementum – adaptiv versjon
+# Movementum — обновление текстов, 18 ноября 2026
 
-Åpne `index.html` i VS Code med Live Server, eller direkte i nettleseren.
+Откройте `index.html` через Live Server в VS Code. Сайт остаётся статическим HTML/CSS/JavaScript, сборка не нужна.
 
-## Endringer
+## Что изменено
 
-- Mobil (opp til 759px): egnet énkolonnes oppsett, komprimerte mellomrom, kontrollert bildekutt, større berøringsflater og ny bildesammensetning i galleriet.
-- Nettbrett (760–1199px): tilpassede bildeflater og to-kolonners seksjoner, med plass til faktisk lesbar tekst.
-- Store skjermer (1200px+): beholdt originalt uttrykk med mykere overganger mellom breddene.
-- Stabilt sideforhold på planleggerbildet ved innlasting på telefon.
-- Beholdt originalfargene, 3D-flip-knappen, teksten, bildene og nettbutikklenkene.
+- Главная: вступление, философия, три направления, женское здоровье и биография Норы.
+- Retreat: Movementum Retreat, актуальное описание выходных, темы, активности, рабочая тетрадь и 30-дневный план.
+- Добавлены Elsa-Kristina Paus Rasch и Sanjana. Фото Саньяны извлечено из её PDF, оптимизировано в WebP.
+- Добавлены цены ретрита, проживания и питания; обновлены вопросы и ответы.
+- Новая страница `woman.html`: весь основной материал Movementum Woman и цены на персональный коучинг.
+- Пункт «Produkter» ведёт к обзору ретрита и коучинга. Блок существующего планировщика сохранён ниже.
+- Сохранены палитра, шрифты, видео, фотографии проекта и существующие анимации. Новые разделы оформлены в `css/content-update.css`.
 
-Prosjektet består av ren HTML/CSS og originale bilder. Google-fonten DM Sans lastes fra Google Fonts når nettverket er tilgjengelig.
+## Приоритет документов
+
+Использованы даты с присланного скриншота:
+
+| Дата      | Документы                                                                   | Использование                                                       |
+| --------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 14 ноября | Nettsiden side 1, Tekst nettsiden side 2, Nettsiden side 3, Nettside side 4 | Основные тексты главной, философия, темы ретрита                    |
+| 14 ноября | Priser Movementum helse retreat                                             | Цены на ретрит, номера и питание                                    |
+| 14 ноября | Samarbeidspartner                                                           | Биография Elsa-Kristina Paus Rasch                                  |
+| 15 ноября | NETTSIDE 4, Bak Movementum                                                  | Дополняющая философия; при совпадении приоритет версии от 16 ноября |
+| 16 ноября | Under produkter på nettsiden                                                | Название Retreat, содержание выходных, актуальная биография Норы    |
+| 16 ноября | MOVEMENTUM WOMAN                                                            | Отдельная страница коучинга, описание и цены                        |
+| 17 ноября | Møt Sanjana                                                                 | Последняя биография и фотография Саньяны                            |
+
+Исправлены опечатки в норвежских текстах. Повторяющиеся рекламные формулировки сокращены. Дополнительные абзацы о Норе, коже и упражнениях размещены в раскрывающихся блоках. Точное расписание по часам не добавлено: его нет в присланных материалах.
+
+## Связь и запись
+
+В PDF нет готовой ссылки на регистрацию или оплату. Кнопки связи используют уже существующий адрес `post@movementum.no` и открывают почтовое приложение. Они не бронируют место и не принимают оплату. При получении рабочей ссылки замените соответствующий `mailto:` в `retreat.html` и/или `woman.html`.
+
+## Как перенести изменения
+
+Скопируйте содержимое папки `movementum` в существующую папку проекта с заменой файлов. В архиве нет истории Git; ваш локальный каталог `.git` остаётся на месте.
+
+Изменённые/добавленные файлы:
+
+- `index.html`, `retreat.html`, `woman.html`
+- `personvern.html`, `404.html` — только ссылка «Produkter» в меню
+- `css/content-update.css`
+- `assets/images/optimized/sanjana-480.webp`, `sanjana-960.webp`
+- `sitemap.xml`, `README.md`
+
+Проверены локальные ссылки и якоря, изображения, цены по PDF, мобильная и планшетная вёрстка, меню и раскрывающиеся ответы. Публикация на рабочий домен не выполнялась.

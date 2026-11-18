@@ -4,9 +4,9 @@
   const duration = 290;
   const easing = 'cubic-bezier(0.22, 0.72, 0.24, 1)';
 
-  document.querySelectorAll('.retreat-faq details').forEach((details) => {
+  document.querySelectorAll('.retreat-faq details, .editorial-details').forEach((details) => {
     const summary = details.querySelector('summary');
-    const panel = details.querySelector('.retreat-faq-answer');
+    const panel = details.querySelector('.retreat-faq-answer, .editorial-details-answer');
     if (!summary || !panel || !panel.animate) return;
 
     let animation = null;

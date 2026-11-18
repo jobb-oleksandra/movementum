@@ -187,3 +187,45 @@
 	flex-wrap: wrap;
 	gap: 12px;
 }
+
+/* Phones: the four-column cookie table becomes one small card per row,
+   each value with its own label, so nothing is wider than the screen. */
+.legal-table td:first-child { overflow-wrap: anywhere; }
+@media (max-width: 599px) {
+	.legal-table thead {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+	}
+	.legal-table,
+	.legal-table tbody,
+	.legal-table tr,
+	.legal-table td {
+		display: block;
+		width: 100%;
+	}
+	.legal-table tr {
+		padding: 14px 0 12px;
+		border-bottom: 1px solid var(--line);
+	}
+	.legal-table tr:first-child { border-top: 1px solid var(--line); }
+	.legal-table td {
+		display: grid;
+		grid-template-columns: 82px minmax(0, 1fr);
+		gap: 12px;
+		padding: 4px 0;
+		border: 0;
+	}
+	.legal-table td::before {
+		content: attr(data-label);
+		font-size: var(--type-label);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--ink-mauve);
+		padding-top: 2px;
+	}
+	.legal-table td:first-child { font-weight: 600; color: var(--ink-deep); }
+}

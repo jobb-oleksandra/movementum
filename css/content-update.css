@@ -1,0 +1,454 @@
+/* Client copy, 14–17 November 2026. New editorial sections use the existing tokens. */
+.offerings,
+.retreat-partners,
+.woman-support,
+.woman-coaching {
+	padding: clamp(64px, 8vw, 120px) 0;
+}
+.offerings {
+	background: var(--milk);
+}
+.offerings-heading,
+.partners-heading,
+.woman-section-heading {
+	max-width: 740px;
+	margin-bottom: clamp(32px, 4vw, 60px);
+}
+.offerings h2,
+.retreat-partners h2,
+.woman-page h2 {
+	font-size: var(--type-heading);
+	margin: 16px 0 24px;
+}
+.offerings-grid,
+.partners-layout,
+.woman-coaching-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: clamp(36px, 7vw, 110px);
+}
+.offerings-grid article {
+	border-top: 1px solid var(--line);
+	padding-top: 26px;
+}
+.offerings h3,
+.partner-copy h3,
+.woman-page h3,
+.retreat-takeaways > h3 {
+	font: 500 clamp(27px, 2.6vw, 37px)/1.15 var(--font-editorial);
+	letter-spacing: -0.015em;
+	margin: 15px 0 20px;
+}
+.offerings p:not(.eyebrow),
+.partner-copy p:not(.eyebrow),
+.woman-page main p:not(.eyebrow),
+.woman-support li {
+	color: var(--brown-soft);
+	font-size: var(--type-copy);
+	line-height: 1.8;
+}
+.offerings p:not(.eyebrow),
+.partner-copy p:not(.eyebrow) {
+	margin-bottom: 16px;
+}
+.offerings .offering-subtitle {
+	color: var(--ink-deep);
+	font-weight: 500;
+}
+.offerings .text-link {
+	margin-top: 12px;
+}
+.retreat-partners {
+	background: var(--sand-pale);
+}
+.partners-layout {
+	grid-template-columns: minmax(0, 1fr);
+	gap: clamp(40px, 6vw, 80px);
+}
+.partner-copy {
+	display: grid;
+	grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+	align-items: start;
+	gap: clamp(32px, 6vw, 95px);
+	border-top: 1px solid var(--line);
+	padding-top: 25px;
+}
+.partner-sanjana {
+	border: 0;
+	padding: 0;
+}
+.partner-sanjana > img {
+	display: block;
+	width: min(100%, 390px);
+	height: auto;
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
+	margin: 0 0 28px;
+}
+.editorial-details {
+	border-top: 1px solid var(--line);
+	border-bottom: 1px solid var(--line);
+	margin-top: 25px;
+}
+.editorial-details summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+	cursor: pointer;
+	padding: 17px 0;
+	font-size: var(--type-small);
+	list-style: none;
+}
+.editorial-details summary::-webkit-details-marker {
+	display: none;
+}
+.editorial-details summary::after {
+	content: "+";
+	font-size: 23px;
+	line-height: 1;
+}
+.editorial-details[open] summary::after {
+	content: "−";
+}
+.editorial-details p {
+	margin: 0 0 18px;
+	color: var(--brown-soft);
+	font-size: var(--type-copy);
+	line-height: 1.8;
+}
+.retreat-takeaways {
+	grid-column: 1 / -1;
+	border-top: 1px solid var(--line);
+	padding-top: 22px;
+}
+.takeaway-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 30px;
+}
+.takeaway-grid h4 {
+	font: 500 var(--type-copy)/1.5 var(--font);
+	margin: 0 0 9px;
+	text-transform: none;
+	letter-spacing: 0;
+}
+.takeaway-grid p {
+	font-size: var(--type-copy);
+	line-height: 1.7;
+	color: var(--brown-soft);
+}
+.price-list {
+	margin: 25px 0;
+}
+.price-list > div {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 18px;
+	padding: 18px 0;
+	border-top: 1px solid var(--line);
+}
+.price-list > div:last-child {
+	border-bottom: 1px solid var(--line);
+}
+.price-list dt {
+	font-size: var(--type-copy);
+	font-weight: 500;
+	line-height: 1.55;
+}
+.price-list dt small {
+	display: block;
+	font-size: var(--type-note);
+	font-weight: 400;
+	color: var(--brown-soft);
+	margin-top: 5px;
+}
+.price-list dd {
+	margin: 0;
+	white-space: nowrap;
+	font-size: var(--type-copy);
+	font-weight: 500;
+	color: var(--ink-deep);
+}
+.woman-hero {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	background: #e3dbcf;
+}
+.woman-hero-copy {
+	padding: clamp(56px, 7vw, 105px) clamp(28px, 7vw, 112px);
+	align-self: center;
+}
+.woman-hero h1 {
+	font-size: var(--type-hero);
+	margin: 20px 0 25px;
+}
+.woman-page main p:not(.eyebrow) {
+	margin-bottom: 20px;
+}
+.woman-hero .button {
+	margin-top: 10px;
+}
+.woman-hero-photo {
+	position: relative;
+	min-height: 560px;
+	margin: 0;
+}
+.woman-hero-photo img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 51% 50%;
+}
+.woman-support {
+	background: var(--milk);
+}
+.woman-page .footer-links {
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+.woman-support-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: clamp(22px, 4vw, 65px);
+}
+.woman-support-grid article {
+	border-top: 1px solid var(--line);
+	padding-top: 10px;
+}
+.woman-support-grid ul {
+	padding-left: 19px;
+	margin: 0;
+}
+.woman-support-grid li {
+	margin-bottom: 10px;
+	padding-left: 3px;
+}
+.woman-coaching {
+	background: #e9e0d8;
+}
+.woman-prices h3 {
+	margin-top: 0;
+}
+.woman-page .woman-ending {
+	padding: clamp(65px, 8vw, 110px) var(--gutter);
+}
+.woman-page .woman-ending p:not(.woman-signature) {
+	font: 500 clamp(32px, 4vw, 52px)/1.2 var(--font-editorial);
+}
+.woman-page .woman-ending .woman-signature {
+	font-size: var(--type-small);
+	margin: 25px 0 0;
+	letter-spacing: 0.1em;
+}
+@media (max-width: 959px) {
+	.woman-hero {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	.woman-hero-copy {
+		padding: 55px var(--gutter);
+		max-width: 740px;
+	}
+	.woman-hero-photo {
+		min-height: 0;
+		height: clamp(340px, 65vw, 560px);
+	}
+	.woman-support-grid {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+	.woman-support-grid ul {
+		max-width: 600px;
+	}
+}
+@media (max-width: 759px) {
+	.offerings-grid,
+	.partners-layout,
+	.woman-coaching-grid,
+	.takeaway-grid {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 32px;
+	}
+	.partner-copy {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 20px;
+	}
+	.partner-sanjana {
+		margin-top: 12px;
+	}
+	.partner-sanjana > img {
+		width: 100%;
+		max-width: 430px;
+	}
+	.retreat-takeaways {
+		grid-column: auto;
+	}
+	.woman-prices {
+		margin-top: 10px;
+	}
+	.woman-page .footer-links {
+		justify-content: flex-start;
+	}
+}
+
+/* Retreat 18 Nov 2026 – local refinements to original project. */
+.retreat-page .retreat-nora-quote {
+	padding-block: clamp(66px, 8vw, 118px);
+	background: var(--milk);
+}
+.retreat-page .retreat-nora-quote .philosophy-eyebrow {
+	margin: 0 0 clamp(16px, 2.3vw, 30px);
+	font-family: var(--font);
+	letter-spacing: 0.17em;
+	color: var(--ink-mauve);
+	opacity: 1;
+}
+.retreat-page .retreat-nora-quote .philosophy-statement {
+	max-width: 980px;
+	margin: 0 auto;
+}
+.retreat-page .retreat-nora-quote .philosophy-outro {
+	margin-top: clamp(16px, 2vw, 28px);
+	font: 400 var(--type-copy)/1.7 var(--font);
+	letter-spacing: 0.015em;
+	color: var(--brown-soft);
+	opacity: 1;
+}
+.retreat-page .partner-elsa-identity {
+	min-width: 0;
+}
+.retreat-page .partner-elsa-identity > img {
+	width: min(100%, 390px);
+	height: auto;
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
+	object-position: center 36%;
+	margin-top: clamp(20px, 3vw, 36px);
+}
+/* Animate editorial accordions using the same plus-turn and height effect as FAQ. */
+.retreat-page .editorial-details {
+	overflow: clip;
+}
+.retreat-page .editorial-details summary {
+	position: relative;
+	padding-right: 38px;
+}
+.retreat-page .editorial-details summary::after {
+	content: "+";
+	flex: none;
+	transform: rotate(0deg);
+	transform-origin: center;
+	transition:
+		transform 280ms cubic-bezier(0.22, 0.75, 0.22, 1),
+		color 280ms ease;
+}
+.retreat-page .editorial-details[open] summary::after {
+	content: "+";
+	transform: rotate(45deg);
+	color: var(--ink-mauve);
+}
+.retreat-page .editorial-details-answer {
+	overflow: hidden;
+}
+/* The FAQ heading starts beneath the price eyebrow on two-column layouts. */
+@media (min-width: 760px) {
+	.retreat-page .retreat-practical-bottom .retreat-faq h3 {
+		margin-top: calc(var(--type-label) + 23px);
+	}
+}
+@media (max-width: 759px) {
+	.retreat-page .partner-elsa-identity > img {
+		width: 100%;
+		max-width: 430px;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.retreat-page .editorial-details summary::after {
+		transition: none;
+	}
+}
+
+/* Partners (18 Nov 2026): Elsa-Kristina and Sanjana share one layout –
+   photo on the left, eyebrow + name + text on the right; photo first on phones. */
+.retreat-page .partner-copy {
+	border: 0;
+	padding: 0;
+	align-items: start;
+}
+.retreat-page .partner-copy > img {
+	display: block;
+	width: min(100%, 340px);
+	height: auto;
+	aspect-ratio: 4 / 5;
+	object-fit: cover;
+	margin: 0;
+}
+/* Shorter portraits: the image no longer towers over the bio text. */
+@media (min-width: 760px) {
+	.retreat-page .partners-layout {
+		gap: clamp(44px, 5vw, 64px);
+	}
+	/* Photo column is exactly as wide as the photo, so the text sits close to it. */
+	.retreat-page .partner-copy {
+		grid-template-columns: min(340px, 38%) minmax(0, 1fr);
+	}
+	.retreat-page .partner-copy .partner-description {
+		max-width: 800px;
+	}
+}
+.retreat-page .partner-elsa > img {
+	object-position: center 36%;
+}
+.retreat-page .partner-copy .partner-description > .eyebrow {
+	margin: 0;
+}
+.retreat-page .partner-copy .partner-description > h3 {
+	margin: 15px 0 20px;
+}
+@media (min-width: 760px) {
+	.retreat-page .partner-copy .partner-description {
+		padding-top: 8px;
+	}
+}
+@media (max-width: 759px) {
+	.retreat-page .partner-copy > img {
+		width: 100%;
+		max-width: 430px;
+		aspect-ratio: 4 / 4.4;
+	}
+	.retreat-page .partner-sanjana {
+		margin-top: 0;
+	}
+}
+
+/* Philosophy line: typographic middle dots instead of slanted serif hyphens.
+   Words never break apart; on narrow screens they stack one per line. */
+.retreat-page .philosophy-statement .ph-word {
+	white-space: nowrap;
+	color: inherit;
+}
+.retreat-page .philosophy-statement .ph-accent {
+	color: var(--ink-mauve);
+}
+.retreat-page .philosophy-statement .ph-sep {
+	color: var(--ink-mauve);
+	opacity: 0.7;
+}
+@media (max-width: 599px) {
+	.retreat-page .philosophy-statement .ph-word {
+		display: block;
+	}
+	.retreat-page .philosophy-statement .ph-sep {
+		display: none;
+	}
+	.retreat-page .retreat-nora-quote .philosophy-statement {
+		line-height: 1.12;
+	}
+}
+
+/* woman.html ending: break only between short sentences. */
+.woman-page .woman-ending .keep-together {
+	white-space: nowrap;
+}

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Bytt ut https://www.movementum.no med det ekte domenet før publisering. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<url><loc>https://www.movementum.no/</loc><lastmod>2026-11-16</lastmod></url>
-	<url><loc>https://www.movementum.no/retreat.html</loc><lastmod>2026-11-16</lastmod></url>
-	<url><loc>https://www.movementum.no/personvern.html</loc><lastmod>2026-11-16</lastmod></url>
+	<url><loc>https://www.movementum.no/</loc><lastmod>2026-11-18</lastmod></url>
+	<url><loc>https://www.movementum.no/retreat.html</loc><lastmod>2026-11-18</lastmod></url>
+	<url><loc>https://www.movementum.no/personvern.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://www.movementum.no/woman.html</loc><lastmod>2026-11-18</lastmod></url>
 </urlset>

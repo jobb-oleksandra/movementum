@@ -1,3 +1,13 @@
+/* Cormorant Garamond draws hyphens and dashes on a slant, which reads as a
+   mistake in names like "Elsa-Kristina". Only these characters are taken from
+   a straight system sans; every letter still comes from Cormorant. */
+@font-face {
+	font-family: "Editorial Dash";
+	src: local("Helvetica Neue"), local("HelveticaNeue"), local("Helvetica"),
+		local("Arial"), local("ArialMT"), local("Roboto"), local("Roboto-Regular");
+	font-weight: 100 900;
+	unicode-range: U+002D, U+2010-2014;
+}
 /* Movementum — airy, outdoor-wellness direction.
    Softened tones from the original palette, no new brand colours.
    No cards, gradients, shining buttons or italic display text. */
@@ -21,7 +31,7 @@
 	--milk: #fbfaf7;
 	--line: rgba(79, 62, 58, 0.21);
 	--font: "DM Sans", Arial, sans-serif;
-	--font-editorial: "Cormorant Garamond", Garamond, Georgia, serif;
+	--font-editorial: "Editorial Dash", "Cormorant Garamond", Garamond, Georgia, serif;
 	--gutter: clamp(22px, 5.2vw, 94px);
 	--wide: 1360px;
 	/* Fluid typography: readable floors on mobile, restrained growth on large screens. */
@@ -1524,4 +1534,22 @@ h2 {
 .product-note,
 .life-story-photo figcaption {
 	color: var(--ink-stone);
+}
+
+/* Letter-spaced text must not use ligatures: with wide tracking the "fi"/"fl"
+   ligature stays glued together while every other letter is spaced out
+   ("filosofi"). Serif headings with tight tracking keep their ligatures. */
+body {
+	font-variant-ligatures: no-common-ligatures;
+}
+.eyebrow,
+.quiet-line,
+.button,
+.text-link,
+.woman-signature,
+.interlude .philosophy-eyebrow,
+.interlude .philosophy-outro,
+.top-note-track {
+	font-variant-ligatures: none;
+	font-feature-settings: "kern" 1, "liga" 0, "clig" 0;
 }
