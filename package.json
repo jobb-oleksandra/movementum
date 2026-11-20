@@ -1,0 +1,13 @@
+{
+	"name": "movementum",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "node scripts/build.mjs",
+		"preview": "node scripts/build.mjs && wrangler dev",
+		"deploy": "node scripts/build.mjs && wrangler deploy"
+	},
+	"devDependencies": {
+		"wrangler": "4.158.0"
+	}
+}

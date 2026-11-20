@@ -229,3 +229,61 @@
 	}
 	.legal-table td:first-child { font-weight: 600; color: var(--ink-deep); }
 }
+.legal-page main h3 {
+	font: 600 var(--type-copy) / 1.4 var(--font);
+	color: var(--ink-deep);
+	margin: 24px 0 6px;
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+/* «hidden» skal alltid skjule, også elementer med egen display-verdi (.button). */
+[hidden] {
+	display: none !important;
+}
+
+/* Påmeldingsboks på retreat-siden. */
+.retreat-booking {
+	margin-top: 28px;
+	padding-top: 22px;
+	border-top: 1px solid var(--line);
+}
+.retreat-booking h4 {
+	margin: 0 0 8px;
+	font: 600 var(--type-copy) / 1.4 var(--font);
+	color: var(--ink-deep);
+}
+.retreat-booking ol {
+	margin: 0 0 20px;
+	padding-left: 1.2em;
+}
+.retreat-booking li + li {
+	margin-top: 6px;
+}
+.retreat-booking-note {
+	margin-top: 12px;
+	font-size: var(--type-small);
+}
+/* To knapper under hverandre i avslutningen på retreat-siden. */
+.retreat-ending [data-retreat-buy] {
+	margin-bottom: 12px;
+}
+/* Hint under bestillingsknappen for coaching. */
+.woman-booking-note {
+	margin-top: 14px;
+	font-size: var(--type-small);
+	color: var(--ink-stone);
+}
+.woman-booking-note a {
+	color: var(--ink-mauve);
+	text-underline-offset: 3px;
+}
+
+/* Bildebytte 20.11: Nora med mikrofon i «Plass til kvinnekroppen» (forsiden)
+   og nytt smilende portrett i «Møt Nora» på retreat-siden. Hold ansiktet i bildet. */
+.home-health-photo img {
+	object-position: 42% 40%;
+}
+.retreat-page .retreat-nora-photo img {
+	object-position: 50% 22%;
+}

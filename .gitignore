@@ -8,3 +8,11 @@ Thumbs.db
 
 .vercel
 .env*
+
+# Cloudflare
+node_modules/
+dist/
+.wrangler/
+
+# Store originalbilder (publiseres ikke, holdes utenfor git)
+assets/originals/

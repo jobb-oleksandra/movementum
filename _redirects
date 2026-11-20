@@ -1,0 +1,12 @@
+# Cloudflare: omdirigeringer (samme som i vercel.json).
+# movementum.no -> www håndteres av en Redirect Rule i Cloudflare-dashbordet.
+/                         /index.html                      200
+/privacy-policy           /personvern.html                 301
+/pages/privacy-policy     /personvern.html                 301
+/personvern               /personvern.html                 301
+/retreat                  /retreat.html                    301
+/woman                    /woman.html                      301
+/salgsbetingelser         /salgsbetingelser.html           301
+/store                    https://www.movementum.shop/     302
+/store/*                  https://www.movementum.shop/     302
+/offers/*                 https://www.movementum.shop/     302
