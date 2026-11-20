@@ -5,6 +5,8 @@
 	"name": "movementum",
 	"main": "src/index.js",
 	"compatibility_date": "2025-09-01",
+	// Testadresse: movementum.movementum.workers.dev
+	"workers_dev": true,
 	"assets": {
 		"directory": "./dist",
 		"binding": "ASSETS",
