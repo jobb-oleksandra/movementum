@@ -1,0 +1,43 @@
+/* Bredde- og bildefikser (23.11.2026).
+   Seksjoner der bildet går helt ut til kanten, ble på svært brede skjermer
+   (og når siden zoomes ut) bare bredere, ikke høyere. Bildene ble da en smal
+   stripe og hodene ble kuttet. Over 1600px holdes disse seksjonene like brede
+   som på en vanlig laptop og sentreres, slik at bildene beholder proporsjonene. */
+@media (min-width: 1600px) {
+	.split-section,
+	.home-health,
+	.woman-hero,
+	.retreat-page .retreat-photo-break {
+		max-width: 1600px;
+		margin-inline: auto;
+	}
+}
+
+/* «Plass til kvinnekroppen» på små laptoper og nettbrett (760–1199px).
+   Den gamle regelen la bildet under teksten i full bredde, fordi det gamle
+   scenebildet hadde to personer i hver sin kant. Nå er det ett bilde av Nora,
+   så vi beholder to kolonner som i «Møt Nora», og bildet blir ikke gigantisk. */
+@media (min-width: 760px) and (max-width: 1199px) {
+	.home-health {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	}
+	.home-health-copy {
+		order: 0;
+		justify-content: center;
+		padding: clamp(45px, 5vw, 70px) clamp(26px, 5vw, 62px);
+	}
+	.home-health-copy .copy-content {
+		max-width: 465px;
+	}
+	.home-health-photo {
+		order: 0;
+		aspect-ratio: auto;
+		min-height: clamp(380px, 45vw, 520px);
+	}
+}
+
+/* Movementum Woman: ansiktet er øverst i bildet – hold det i rammen. */
+.woman-hero-photo img {
+	object-position: 50% 22%;
+}

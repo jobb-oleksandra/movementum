@@ -1,0 +1,52 @@
+/* Skrifttyper lagret på vårt eget domene (fra Fontsource 5.3.0, SIL Open Font
+   License 1.1 – se assets/fonts/OFL-*.txt). Tidligere ble de hentet fra Google
+   Fonts, som da fikk besøkendes IP-adresse før samtykke. */
+@font-face {
+	font-family: "DM Sans";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../assets/fonts/dm-sans-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+	font-family: "DM Sans";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("../assets/fonts/dm-sans-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+	font-family: "DM Sans";
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("../assets/fonts/dm-sans-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+	font-family: "DM Sans";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("../assets/fonts/dm-sans-latin-700-normal.woff2") format("woff2");
+}
+@font-face {
+	font-family: "Cormorant Garamond";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../assets/fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+	font-family: "Cormorant Garamond";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("../assets/fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+	font-family: "Cormorant Garamond";
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("../assets/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2");
+}
