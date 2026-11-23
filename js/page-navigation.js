@@ -26,7 +26,7 @@
 
     const target = new URL(link.href, window.location.href);
     if (target.origin !== location.origin || target.pathname === location.pathname ||
-        !/(?:^|\/)(?:index|retreat)\.html$/i.test(target.pathname)) return;
+        !/^\/$|(?:^|\/)(?:index|retreat|woman)\.html$/i.test(target.pathname)) return;
 
     event.preventDefault();
     html.classList.add('page-transition-leave');

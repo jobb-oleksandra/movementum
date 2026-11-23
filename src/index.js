@@ -9,6 +9,11 @@ export default {
 			url.protocol = 'https:';
 			return Response.redirect(url.toString(), 301);
 		}
+		// Forsiden har én adresse: /index.html -> / (riktig canonical for Google).
+		if (url.pathname === '/index.html') {
+			url.pathname = '/';
+			return Response.redirect(url.toString(), 301);
+		}
 		return env.ASSETS.fetch(request);
 	},
 };
