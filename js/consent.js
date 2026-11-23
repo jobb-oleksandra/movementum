@@ -68,7 +68,8 @@
     banner.addEventListener('keydown', event => {
       if (event.key === 'Escape' && state) close();
     });
-    document.body.appendChild(banner);
+    // Først i dokumentet, så tastaturbrukere når valget med en gang (WCAG 2.4.3).
+    document.body.prepend(banner);
   };
 
   const open = () => {

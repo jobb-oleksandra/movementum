@@ -295,3 +295,28 @@
 	line-height: 1.6;
 	color: var(--brown-soft);
 }
+
+/* Universell utforming (WCAG 2.1 AA), kontrast 23.11.2026:
+   tekst må ha minst 4,5:1 mot bakgrunnen. Samme fargetone, litt mørkere. */
+.retreat-page .retreat-faq details p {
+	color: var(--ink-mauve, #77565d);
+}
+.product-lines p {
+	opacity: 1;
+	color: var(--brown-soft, #675a55);
+}
+.product-lines p:nth-child(2) {
+	color: var(--ink-mauve, #77565d);
+}
+
+/* Lange ord i overskrifter (f.eks. «SALGSBETINGELSER») skal ikke gi sideveis
+   rulling på 320px / 400 % zoom (WCAG 1.4.10). */
+.legal-page h1 {
+	font-size: min(var(--type-hero), 8vw);
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+h1,
+h2 {
+	overflow-wrap: break-word;
+}
