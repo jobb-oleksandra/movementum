@@ -287,3 +287,11 @@
 .retreat-page .retreat-nora-photo img {
 	object-position: 50% 22%;
 }
+
+/* Selgeropplysninger i bunnteksten (e-handelsloven § 8). */
+.site-footer .footer-company {
+	margin-top: 10px;
+	font-size: var(--type-label);
+	line-height: 1.6;
+	color: var(--brown-soft);
+}
