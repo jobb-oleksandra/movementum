@@ -16,3 +16,6 @@ dist/
 
 # Store originalbilder (publiseres ikke, holdes utenfor git)
 assets/originals/
+
+# Shopify-maler med Panorama-koder (kun lokalt, skal ikke på GitHub)
+shopify/
