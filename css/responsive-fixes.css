@@ -37,6 +37,19 @@
 	}
 }
 
+/* «Plass til kvinnekroppen» på mobil (25.11.2026): «KVINNEKROPPEN» skal stå
+   som ett ord på én linje, ikke deles i «KVINNEKROPP / EN». Skriftstørrelsen
+   følger skjermbredden, så ordet alltid får plass (også på 320px). */
+@media (max-width: 759px) {
+	.home-health-copy h2 {
+		max-width: none;
+		font-size: min(clamp(28px, 8.9vw, 46px), 9.2vw);
+	}
+	.home-health-copy h2 .tone-accent {
+		white-space: nowrap;
+	}
+}
+
 /* Movementum Woman: ansiktet er øverst i bildet – hold det i rammen. */
 .woman-hero-photo img {
 	object-position: 50% 22%;
