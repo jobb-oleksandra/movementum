@@ -54,3 +54,44 @@
 .woman-hero-photo img {
 	object-position: 50% 22%;
 }
+
+/* Coaching-priser med «Kjøp»-lenke til nettbutikken (25.11.2026). */
+.woman-prices .price-list > div {
+	grid-template-columns: minmax(0, 1fr) auto auto;
+	align-items: center;
+	gap: 18px 22px;
+}
+/* Liten knapp i samme stil som sidens .button-outline. */
+.woman-prices .price-buy a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 42px;
+	min-width: 76px;
+	padding: 0 18px;
+	border: 1px solid var(--brown, #4f3e3a);
+	background: transparent;
+	color: var(--brown, #4f3e3a);
+	font: 500 var(--type-small, 15px) / 1.2 var(--font, Arial, sans-serif);
+	letter-spacing: 0.08em;
+	text-decoration: none;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+}
+.woman-prices .price-buy a:hover,
+.woman-prices .price-buy a:focus-visible {
+	background: var(--brown, #4f3e3a);
+	color: var(--cream, #f8f5f3);
+}
+.woman-prices .price-buy a:focus-visible {
+	outline: 2px solid var(--pink-dark, #986972);
+	outline-offset: 3px;
+}
+.woman-prices .price-list > div {
+	padding-block: 8px;
+}
+.woman-prices p a {
+	color: var(--ink-mauve, #77565d);
+	text-underline-offset: 3px;
+}
