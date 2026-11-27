@@ -55,6 +55,12 @@
 	object-position: 50% 22%;
 }
 
+/* Samarbeidspartner Malene (27.11.2026): samme kort som Elsa og Sanjana.
+   Portrettet er høyt, så ansiktet holdes i rammen. */
+.retreat-page .partner-malene > img {
+	object-position: 50% 22%;
+}
+
 /* Coaching-priser med «Kjøp»-lenke til nettbutikken (25.11.2026). */
 .woman-prices .price-list > div {
 	grid-template-columns: minmax(0, 1fr) auto auto;
